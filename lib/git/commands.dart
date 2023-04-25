@@ -6,4 +6,4 @@
 
 // Get Data - - - - - - - - - - - - - - - - - - - //
 
-// git pull -u origin master
+// git pull
