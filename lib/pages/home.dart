@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/widgets/menu_app_bar_option.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -28,6 +29,7 @@ class _HomeState extends State<Home> {
                         Icon(
                           Icons.local_florist_rounded,
                           size: 60,
+                          color: Color.fromARGB(255, 53, 135, 56),
                         ),
                         SizedBox(width: 10),
                         Text(
@@ -49,54 +51,12 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Home',
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'About Us',
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Shop',
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Blog',
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Contact',
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Order Track',
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                          ),
-                        ),
+                        menuAppBarOption('Home'),
+                        menuAppBarOption('About Us'),
+                        menuAppBarOption('Shop'),
+                        menuAppBarOption('Blog'),
+                        menuAppBarOption('Contact'),
+                        menuAppBarOption('Order Track'),
                       ],
                     ),
                   ),
@@ -105,7 +65,9 @@ class _HomeState extends State<Home> {
                 Expanded(
                   flex: 2,
                   child: Container(
-                    child: Placeholder(),
+                    child: Row(
+                      children: [],
+                    ),
                   ),
                 ),
               ],
