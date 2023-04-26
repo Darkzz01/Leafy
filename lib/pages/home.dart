@@ -45,6 +45,7 @@ class _HomeState extends State<Home> {
                 ),
                 const Placeholder(),
                 const Placeholder(),
+                const Placeholder(),
               ],
             ),
           ),
