@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/widgets/menu_app_bar_option.dart';
 
+import '../widgets/menu_app_bar_action.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -25,7 +27,7 @@ class _HomeState extends State<Home> {
                   child: Container(
                     child: Row(
                       children: const [
-                        SizedBox(width: 40),
+                        SizedBox(width: 70),
                         Icon(
                           Icons.local_florist_rounded,
                           size: 60,
@@ -63,10 +65,22 @@ class _HomeState extends State<Home> {
                 ),
                 // Actions - - - - - - - - - - - - - - - - - - - - - - - - //
                 Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Container(
                     child: Row(
-                      children: [],
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        menuAppBarAction(1, Icons.search_rounded),
+                        const SizedBox(width: 10),
+                        menuAppBarAction(0, Icons.repeat_rounded),
+                        const SizedBox(width: 10),
+                        menuAppBarAction(0, Icons.favorite_border_rounded),
+                        const SizedBox(width: 10),
+                        menuAppBarAction(0, Icons.shopping_cart_outlined),
+                        const SizedBox(width: 10),
+                        menuAppBarAction(0, Icons.person_outline_outlined),
+                        const SizedBox(width: 70),
+                      ],
                     ),
                   ),
                 ),
