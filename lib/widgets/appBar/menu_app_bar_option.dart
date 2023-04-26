@@ -8,9 +8,9 @@ TextButton menuAppBarOption(String title) {
     onPressed: () {},
     child: Text(
       title,
-      style: const TextStyle(
+      style: TextStyle(
         fontSize: 15,
-        color: Colors.black,
+        color: Colors.black.withOpacity(.75),
       ),
     ),
   );
