@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                   ),
                   child: Row(
                     children: const [
-                      SizedBox(width: 20),
+                      SizedBox(width: 40),
                       Text(
                         'bold',
                         style: TextStyle(
@@ -95,9 +95,9 @@ class _HomeState extends State<Home> {
                   ),
                   child: Row(
                     children: const [
-                      SizedBox(width: 20),
+                      SizedBox(width: 40),
                       Text(
-                        'Plant \n community',
+                        'Plant\ncommunity',
                         style: TextStyle(
                             fontSize: 40,
                             fontWeight: FontWeight.w600,
@@ -132,9 +132,40 @@ class _HomeState extends State<Home> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MenuBodyProduct(),
+              MenuBodyProduct(
+                title: 'cominsoon',
+                icon: Icons.eco_rounded,
+                price: 200.00,
+                oldPrice: 500.00,
+              ),
+              MenuBodyProduct(
+                title: 'for',
+                icon: Icons.ac_unit,
+                price: 100.00,
+                oldPrice: 300.00,
+              ),
+              MenuBodyProduct(
+                title: 'imagine',
+                icon: Icons.add_moderator_rounded,
+                price: 350.00,
+                oldPrice: 700.00,
+              ),
+              MenuBodyProduct(
+                title: 'Organic',
+                icon: Icons.add_to_drive_rounded,
+                price: 400.00,
+                oldPrice: 850.00,
+              ),
             ],
           ),
+          Container(
+            height: 500,
+            color: Colors.amber,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [],
+            ),
+          )
         ],
       ),
     );

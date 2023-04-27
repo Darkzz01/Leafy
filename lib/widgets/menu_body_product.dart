@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
 
 class MenuBodyProduct extends StatefulWidget {
-  MenuBodyProduct({Key? key}) : super(key: key);
+  MenuBodyProduct({
+    Key? key,
+    required this.title,
+    required this.icon,
+    required this.price,
+    required this.oldPrice,
+  }) : super(key: key);
+  String title;
+  IconData icon;
+  double price;
+  double oldPrice;
 
   @override
   State<MenuBodyProduct> createState() => _MenuBodyProductState();
@@ -26,35 +36,46 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
             decoration: const BoxDecoration(
               color: Color.fromARGB(19, 33, 149, 243),
             ),
-            child: const Icon(
-              Icons.eco_sharp,
-              size: 200,
-              color: Color.fromARGB(255, 12, 102, 15),
+            child: Icon(
+              widget.icon,
+              size: 125,
+              color: const Color.fromARGB(255, 12, 102, 15),
             ),
           ),
-          const Text(
-            'ComiSoon',
+          Text(
+            widget.title,
             textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 30, fontWeight: FontWeight.w500, color: Colors.black),
+            style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+            ),
           ),
           const SizedBox(height: 6),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
-                ' \$700.00',
-                style: TextStyle(fontSize: 20, color: Colors.black),
+                '\$${widget.price}',
+                style: const TextStyle(fontSize: 20, color: Colors.black),
               ),
-              SizedBox(width: 5),
+              const SizedBox(width: 5),
               Text(
-                '\$800.00-',
-                style: TextStyle(decoration: TextDecoration.lineThrough),
+                '\$${widget.oldPrice}',
+                style: const TextStyle(decoration: TextDecoration.lineThrough),
               ),
             ],
           ),
           const SizedBox(height: 8),
           OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.green,
+              shape: const BeveledRectangleBorder(),
+              side: const BorderSide(
+                color: Color.fromARGB(153, 53, 135, 56),
+                width: 0.5,
+              ),
+            ),
             onPressed: () {},
             child: const Text(
               'Add to Cart',
