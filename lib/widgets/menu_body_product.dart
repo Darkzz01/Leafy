@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/data/dictionary.dart';
 
 class MenuBodyProduct extends StatefulWidget {
   MenuBodyProduct({
     Key? key,
     required this.title,
-    required this.icon,
+    required this.image,
     required this.price,
     required this.oldPrice,
   }) : super(key: key);
   String title;
-  IconData icon;
+  String image;
   double price;
   double oldPrice;
 
@@ -20,78 +21,107 @@ class MenuBodyProduct extends StatefulWidget {
 class _MenuBodyProductState extends State<MenuBodyProduct> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      width: 400,
-      margin: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(0, 173, 173, 173),
-      ),
-      child: Column(
-        children: [
-          Container(
-            height: 200,
-            width: 400,
-            margin: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(19, 33, 149, 243),
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(0, 173, 173, 173),
+        ),
+        child: Column(
+          children: [
+            Container(
+              height: 310,
+              width: 400,
+              margin: const EdgeInsets.all(0),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 222, 222, 222),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Stack(
+                children: [
+                  Image.asset(widget.image),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Container(
+                      height: 25,
+                      width: 80,
+                      decoration: const BoxDecoration(
+                        color: Color.fromRGBO(89, 178, 126, 1),
+                      ),
+                      child: const Text(
+                        '100 Sales',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Ysabeau',
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            child: Icon(
-              widget.icon,
-              size: 125,
-              color: const Color.fromARGB(255, 12, 102, 15),
+            const SizedBox(height: 15),
+            Text(
+              widget.title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontFamily: 'Ysabeau',
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: Colors.black,
+              ),
             ),
-          ),
-          Text(
-            widget.title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontFamily: 'Ysabeau',
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.black,
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '\$${widget.price}',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: greenColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  '\$${widget.oldPrice}',
+                  style: const TextStyle(
+                    color: Colors.black45,
+                    decoration: TextDecoration.lineThrough,
+                    fontSize: 17,
+                  ),
+                ),
+              ],
             ),
-          ),
-          const SizedBox(height: 6),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                '\$${widget.price}',
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(180, 53, 135, 56),
-                  fontWeight: FontWeight.w600,
+            const SizedBox(height: 14),
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 22, horizontal: 30),
+                foregroundColor: Colors.green,
+                shape: const BeveledRectangleBorder(),
+                side: BorderSide(
+                  color: greenColor,
+                  width: 1,
                 ),
               ),
-              const SizedBox(width: 5),
-              Text(
-                '\$${widget.oldPrice}',
-                style: const TextStyle(
-                  color: Colors.black45,
-                  decoration: TextDecoration.lineThrough,
+              onPressed: () {},
+              child: Text(
+                'Add to Cart',
+                style: TextStyle(
+                  fontFamily: 'Ysabeau',
                   fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black.withOpacity(0.6),
                 ),
               ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          OutlinedButton(
-            style: OutlinedButton.styleFrom(
-              foregroundColor: Colors.green,
-              shape: const BeveledRectangleBorder(),
-              side: const BorderSide(
-                color: Color.fromARGB(153, 53, 135, 56),
-                width: 0.5,
-              ),
             ),
-            onPressed: () {},
-            child: const Text(
-              'Add to Cart',
-              style: TextStyle(fontSize: 30, color: Colors.black),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

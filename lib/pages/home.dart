@@ -12,8 +12,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  bool x = true;
-
   @override
   Widget build(BuildContext context) {
     // final size = MediaQuery.of()
@@ -37,7 +35,8 @@ class _HomeState extends State<Home> {
                     Expanded(
                       flex: 2,
                       child: Container(
-                        padding: const EdgeInsets.all(60),
+                        padding: const EdgeInsets.only(
+                            top: 80, bottom: 80, left: 80),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,11 +74,7 @@ class _HomeState extends State<Home> {
                                   width: 0.5,
                                 ),
                               ),
-                              onPressed: () {
-                                x ? x = false : x = true;
-
-                                setState(() {});
-                              },
+                              onPressed: () {},
                               child: const Text(
                                 'Shop Now',
                                 style: TextStyle(
@@ -94,7 +89,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.all(50),
+                      padding: const EdgeInsets.all(40),
                       child: Image.asset(
                         'assets/sofa.png',
                       ),
@@ -111,27 +106,49 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Container(
                   height: 350,
-                  padding: const EdgeInsets.symmetric(horizontal: 80),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   margin: const EdgeInsets.only(left: 90),
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(17, 27, 100, 98),
+                    color: Color.fromARGB(255, 240, 241, 250),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Forniture\nCollection',
-                        style: TextStyle(
-                          fontFamily: 'Ysabeau',
-                          fontSize: 40,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black87,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Forniture\nCollection',
+                              style: TextStyle(
+                                fontFamily: 'Ysabeau',
+                                fontSize: 40,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.green,
+                              ),
+                              onPressed: () {},
+                              child: const Text(
+                                'Shop Now',
+                                style: TextStyle(
+                                  fontFamily: 'Ysabeau',
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 89, 154, 141),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Icon(
-                        Icons.house_rounded,
-                        size: 150,
-                        color: Color.fromARGB(100, 16, 71, 16),
+                      Expanded(
+                        child: Image.asset('assets/sofa_3.png'),
                       ),
                     ],
                   ),
@@ -141,27 +158,49 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Container(
                   height: 350,
-                  padding: const EdgeInsets.symmetric(horizontal: 80),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   margin: const EdgeInsets.only(right: 90),
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(14, 71, 88, 88),
+                    color: Color.fromARGB(255, 250, 246, 242),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Plant\nCollection',
-                        style: TextStyle(
-                          fontFamily: 'Ysabeau',
-                          fontSize: 40,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black87,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Plant\nCollection',
+                              style: TextStyle(
+                                fontFamily: 'Ysabeau',
+                                fontSize: 40,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.green,
+                              ),
+                              onPressed: () {},
+                              child: const Text(
+                                'Shop Now',
+                                style: TextStyle(
+                                  fontFamily: 'Ysabeau',
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 89, 154, 141),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Icon(
-                        Icons.eco_rounded,
-                        size: 150,
-                        color: Color.fromARGB(98, 80, 75, 17),
+                      Expanded(
+                        child: Image.asset('assets/plant.png'),
                       ),
                     ],
                   ),
@@ -169,66 +208,104 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 75),
           // Title - Division - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           const Text(
-            'Products',
+            'Trendy Product',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 50,
-              fontWeight: FontWeight.w700,
+              fontFamily: 'Ysabeau',
+              fontSize: 35,
+              fontWeight: FontWeight.w600,
               color: Colors.black,
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 25),
           // Paragraph - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-          const Text(
-            'quality plants and the greatest variety of species',
+          Text(
+            'Aliquip irure minim amet adipisicing anim nostrud et ipsum quis\nadipisicing cillum aute voluptate culpa.',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 30,
+              height: 2,
+              fontSize: 15,
               fontWeight: FontWeight.w300,
-              color: Colors.black,
+              color: Colors.black.withOpacity(0.7),
             ),
           ),
           // Products - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MenuBodyProduct(
-                title: 'Doug Wooden Table',
-                icon: Icons.eco_rounded,
-                price: 200.00,
-                oldPrice: 500.00,
-              ),
-              MenuBodyProduct(
-                title: 'for',
-                icon: Icons.ac_unit,
-                price: 100.00,
-                oldPrice: 300.00,
-              ),
-              MenuBodyProduct(
-                title: 'imagine',
-                icon: Icons.add_moderator_rounded,
-                price: 350.00,
-                oldPrice: 700.00,
-              ),
-              MenuBodyProduct(
-                title: 'Organic',
-                icon: Icons.add_to_drive_rounded,
-                price: 400.00,
-                oldPrice: 850.00,
-              ),
-            ],
+          const SizedBox(height: 30),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MenuBodyProduct(
+                  title: 'Small Dinning Table',
+                  image: 'assets/product_0.png',
+                  price: 200.00,
+                  oldPrice: 500.00,
+                ),
+                MenuBodyProduct(
+                  title: 'Doug Wooden Table',
+                  image: 'assets/product_1.png',
+                  price: 100.00,
+                  oldPrice: 300.00,
+                ),
+                MenuBodyProduct(
+                  title: 'Bamboo Forniture',
+                  image: 'assets/product_3.png',
+                  price: 350.00,
+                  oldPrice: 700.00,
+                ),
+                MenuBodyProduct(
+                  title: 'Stylish Hall Room Chair',
+                  image: 'assets/product_2.png',
+                  price: 400.00,
+                  oldPrice: 850.00,
+                ),
+              ],
+            ),
           ),
+          const SizedBox(height: 100),
           // ListView - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
             height: 500,
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: [],
+              children: [
+                MenuBodyProduct(
+                  title: 'Bamboo Forniture',
+                  image: 'assets/product_3.png',
+                  price: 350.00,
+                  oldPrice: 700.00,
+                ),
+              ],
             ),
-          )
+          ),
+          const SizedBox(height: 100),
+          const Text(
+            'Our Store',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Ysabeau',
+              fontSize: 35,
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+            ),
+          ),
+          const SizedBox(height: 25),
+          // Paragraph - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+          Text(
+            'Aliquip irure minim amet adipisicing anim nostrud et ipsum quis\nadipisicing cillum aute voluptate culpa.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              height: 2,
+              fontSize: 15,
+              fontWeight: FontWeight.w300,
+              color: Colors.black.withOpacity(0.7),
+            ),
+          ),
+          const SizedBox(height: 200),
         ],
       ),
     );

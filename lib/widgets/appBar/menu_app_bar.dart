@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/data/dictionary.dart';
 import './menu_app_bar_action.dart';
 import 'menu_app_bar_option.dart';
 
@@ -18,15 +19,15 @@ class MenuAppBar extends StatelessWidget {
             flex: 1,
             child: Container(
               child: Row(
-                children: const [
-                  SizedBox(width: 60),
+                children: [
+                  const SizedBox(width: 60),
                   Icon(
                     Icons.local_florist_rounded,
                     size: 60,
-                    color: Color.fromARGB(255, 89, 154, 141),
+                    color: greenColor,
                   ),
-                  SizedBox(width: 10),
-                  Text(
+                  const SizedBox(width: 10),
+                  const Text(
                     'Leafy',
                     style: TextStyle(
                       fontSize: 35,
@@ -58,37 +59,35 @@ class MenuAppBar extends StatelessWidget {
           // Actions - - - - - - - - - - - - - - - - - - - - - - - - //
           Expanded(
             flex: 1,
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  MenuAppBarAction(
-                    quarter: 1,
-                    icon: Icons.search_rounded,
-                  ),
-                  const SizedBox(width: 10),
-                  MenuAppBarAction(
-                    quarter: 0,
-                    icon: Icons.repeat_rounded,
-                  ),
-                  const SizedBox(width: 10),
-                  MenuAppBarAction(
-                    quarter: 0,
-                    icon: Icons.favorite_border_rounded,
-                  ),
-                  const SizedBox(width: 10),
-                  MenuAppBarAction(
-                    quarter: 0,
-                    icon: Icons.shopping_cart_outlined,
-                  ),
-                  const SizedBox(width: 10),
-                  MenuAppBarAction(
-                    quarter: 0,
-                    icon: Icons.person_outline_outlined,
-                  ),
-                  const SizedBox(width: 60),
-                ],
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MenuAppBarAction(
+                  quarter: 1,
+                  icon: Icons.search_rounded,
+                ),
+                const SizedBox(width: 10),
+                MenuAppBarAction(
+                  quarter: 0,
+                  icon: Icons.repeat_rounded,
+                ),
+                const SizedBox(width: 10),
+                MenuAppBarAction(
+                  quarter: 0,
+                  icon: Icons.favorite_border_rounded,
+                ),
+                const SizedBox(width: 10),
+                MenuAppBarAction(
+                  quarter: 0,
+                  icon: Icons.shopping_cart_outlined,
+                ),
+                const SizedBox(width: 10),
+                MenuAppBarAction(
+                  quarter: 0,
+                  icon: Icons.person_outline_outlined,
+                ),
+                const SizedBox(width: 60),
+              ],
             ),
           ),
         ],
