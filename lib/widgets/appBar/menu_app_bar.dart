@@ -23,7 +23,7 @@ class MenuAppBar extends StatelessWidget {
                   Icon(
                     Icons.local_florist_rounded,
                     size: 60,
-                    color: Color.fromARGB(255, 53, 135, 56),
+                    color: Color.fromARGB(255, 89, 154, 141),
                   ),
                   SizedBox(width: 10),
                   Text(

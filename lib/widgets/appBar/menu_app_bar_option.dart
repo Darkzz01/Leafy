@@ -9,8 +9,8 @@ TextButton menuAppBarOption(String title) {
     child: Text(
       title,
       style: TextStyle(
-        fontSize: 15,
-        color: Colors.black.withOpacity(.75),
+        fontSize: 16,
+        color: Colors.black.withOpacity(.85),
       ),
     ),
   );

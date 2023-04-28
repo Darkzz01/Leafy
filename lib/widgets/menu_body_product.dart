@@ -46,8 +46,9 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
             widget.title,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w500,
+              fontFamily: 'Ysabeau',
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
               color: Colors.black,
             ),
           ),
@@ -57,12 +58,20 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
             children: [
               Text(
                 '\$${widget.price}',
-                style: const TextStyle(fontSize: 20, color: Colors.black),
+                style: const TextStyle(
+                  fontSize: 20,
+                  color: Color.fromARGB(180, 53, 135, 56),
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               const SizedBox(width: 5),
               Text(
                 '\$${widget.oldPrice}',
-                style: const TextStyle(decoration: TextDecoration.lineThrough),
+                style: const TextStyle(
+                  color: Colors.black45,
+                  decoration: TextDecoration.lineThrough,
+                  fontSize: 17,
+                ),
               ),
             ],
           ),
