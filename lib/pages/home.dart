@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/appBar/menu_app_bar.dart';
 
+import '../widgets/list_view_items.dart';
 import '../widgets/menu_body_product.dart';
+import '../widgets/menu_product_item.dart';
+import '../widgets/text_button_items.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -269,15 +273,49 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 100),
           // ListView - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
-            height: 500,
+            height: 400,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                MenuBodyProduct(
-                  title: 'Bamboo Forniture',
-                  image: 'assets/product_3.png',
-                  price: 350.00,
-                  oldPrice: 700.00,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    listViewItem(
+                      'assets/listview_0.png',
+                      'Wooden Furnitue',
+                      '20 Items',
+                    ),
+                    listViewItem(
+                      'assets/product_3.png',
+                      'Bamboo Furniture',
+                      '2 Items',
+                    ),
+                    listViewItem(
+                      'assets/listview_1.png',
+                      'Metal Furnitutre',
+                      '2 Items',
+                    ),
+                    listViewItem(
+                      'assets/listview_2.png',
+                      'Plastic Furniture',
+                      '1 Items',
+                    ),
+                    listViewItem(
+                      'assets/listview_3.png',
+                      'Glass Furniture',
+                      '7 Items',
+                    ),
+                    listViewItem(
+                      'assets/listview_4.png',
+                      'Concrete Furniture',
+                      '0 Items',
+                    ),
+                    listViewItem(
+                      'assets/listview_5.png',
+                      'Bombay Furnitute',
+                      '0 Items',
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -305,7 +343,60 @@ class _HomeState extends State<Home> {
               color: Colors.black.withOpacity(0.7),
             ),
           ),
-          const SizedBox(height: 200),
+          const SizedBox(height: 70),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButtonItems('All'),
+              TextButtonItems('Wooden furnitue'),
+              TextButtonItems('Bamboo furniture'),
+              TextButtonItems('Wikker or ratten furniture'),
+              TextButtonItems('Metal furnitutre'),
+              TextButtonItems('Plastic furniture'),
+            ],
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MenuproductItem(
+                url1: 'assets/listview_4.png',
+                title1: 'Odrex Double Bed',
+                price1: '\$7,500.00',
+                oldprice1: '\$8,000.00',
+              ),
+              MenuproductItem(
+                  url1: 'assets/listview_6.png',
+                  title1: 'Angle Double Bed',
+                  price1: '\$7,500.00',
+                  oldprice1: '\$8,000.00'),
+              MenuproductItem(
+                  url1: 'assets/listview_7.png',
+                  title1: 'Phonex Double Bed',
+                  price1: '\$7,500.00',
+                  oldprice1: '\$8,000.00'),
+              MenuproductItem(
+                  url1: 'assets/listview_2.png',
+                  title1: 'Care Wood Stool',
+                  price1: '\$7,500.00',
+                  oldprice1: '\$8,000.00'),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MenuproductItem(
+                  url1: 'assets/listview_8',
+                  title1: 'Obhai Almirah',
+                  price1: '\$700.00',
+                  oldprice1: '\$800.00'),
+              MenuproductItem(
+                  url1: 'assets/listview_9',
+                  title1: 'Bamboo Table',
+                  price1: '\$750.00',
+                  oldprice1: '\$800.00'),
+            ],
+          )
         ],
       ),
     );
