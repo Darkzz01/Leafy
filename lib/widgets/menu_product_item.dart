@@ -65,11 +65,11 @@ class _MenuproductItemState extends State<MenuproductItem> {
               const SizedBox(width: 10),
               Text(
                 widget.oldprice1,
-                style: TextStyle(
+                style: const TextStyle(
                     decoration: TextDecoration.lineThrough,
                     fontSize: 20,
                     fontFamily: 'ysabeau',
-                    color: greenColor),
+                    color: Colors.black54),
               ),
             ],
           ),

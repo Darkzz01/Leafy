@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/appBar/menu_app_bar.dart';
 
+import '../widgets/body_text_button.dart';
 import '../widgets/list_view_items.dart';
 import '../widgets/menu_body_product.dart';
 import '../widgets/menu_product_item.dart';
@@ -356,47 +357,143 @@ class _HomeState extends State<Home> {
             ],
           ),
           const SizedBox(height: 50),
+
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MenuproductItem(
                 url1: 'assets/listview_4.png',
                 title1: 'Odrex Double Bed',
-                price1: '\$7,500.00',
-                oldprice1: '\$8,000.00',
+                price1: '7,500.0',
+                oldprice1: '8,000.0',
               ),
               MenuproductItem(
                   url1: 'assets/listview_6.png',
                   title1: 'Angle Double Bed',
-                  price1: '\$7,500.00',
-                  oldprice1: '\$8,000.00'),
+                  price1: '7,500.0',
+                  oldprice1: '8,000.0'),
               MenuproductItem(
                   url1: 'assets/listview_7.png',
                   title1: 'Phonex Double Bed',
-                  price1: '\$7,500.00',
-                  oldprice1: '\$8,000.00'),
+                  price1: '7,500.0',
+                  oldprice1: '8,000.0'),
               MenuproductItem(
                   url1: 'assets/listview_2.png',
                   title1: 'Care Wood Stool',
-                  price1: '\$7,500.00',
-                  oldprice1: '\$8,000.00'),
+                  price1: '7,500.0',
+                  oldprice1: '8,000.0'),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MenuproductItem(
-                  url1: 'assets/listview_8',
+                  url1: 'assets/listview_8.png',
                   title1: 'Obhai Almirah',
-                  price1: '\$700.00',
-                  oldprice1: '\$800.00'),
+                  price1: '700.0',
+                  oldprice1: '800.0'),
               MenuproductItem(
-                  url1: 'assets/listview_9',
+                  url1: 'assets/listview_9.png',
                   title1: 'Bamboo Table',
-                  price1: '\$750.00',
-                  oldprice1: '\$800.00'),
+                  price1: '750.0',
+                  oldprice1: '800.0'),
+              MenuproductItem(
+                  url1: 'assets/listview_10.png',
+                  title1: 'Red Wood Almirah',
+                  price1: '7,500.0',
+                  oldprice1: '8,000.0'),
+              MenuproductItem(
+                  url1: 'assets/listview_11.png',
+                  title1: 'Raymond Wood Bed',
+                  price1: '7,500.0',
+                  oldprice1: '8,000.0'),
             ],
-          )
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Container(
+                  margin: const EdgeInsets.only(left: 150),
+                  height: 470,
+                  width: 125,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(244, 248, 251, 255),
+                  ),
+                  child: Image.asset('assets/sofa_2.png'),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  margin: const EdgeInsets.only(right: 150),
+                  height: 470,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(244, 248, 251, 255),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'New Arribal 2022',
+                        style: TextStyle(
+                            fontFamily: 'ysabeau',
+                            fontSize: 70,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      const Text(
+                        'Non commodo sint culpa cillum elit nulla magna dolore ad. Veniam pariatur laboris ad dolore commodo sint eiusmod cillum ipsum. Sint ad ad reprehenderit sit dolore amet ut ad id Lorem pariatur occaecat labore. ',
+                        maxLines: 4,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            fontFamily: 'ysabeau',
+                            fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black45),
+                      ),
+                      const SizedBox(height: 50),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          fixedSize: const Size(150, 50),
+                          backgroundColor: greenColor,
+                          shape: const BeveledRectangleBorder(),
+                        ),
+                        onPressed: () {},
+                        child: const Text(
+                          'Shop Now',
+                          style: TextStyle(
+                              fontFamily: 'ysabeau',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              BodyTextButtons('boogie'),
+              const SizedBox(width: 20),
+              BodyTextButtons('Quicker'),
+              const SizedBox(width: 20),
+              BodyTextButtons('Vagoda'),
+              const SizedBox(width: 20),
+              BodyTextButtons('Mark'),
+              const SizedBox(width: 20),
+              BodyTextButtons('Ogivo'),
+              const SizedBox(height: 200),
+            ],
+          ),
         ],
       ),
     );
