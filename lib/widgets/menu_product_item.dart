@@ -24,7 +24,7 @@ class _MenuproductItemState extends State<MenuproductItem> {
   Widget build(BuildContext context) {
     return Container(
       height: 550,
-      width: 350,
+      width: 420,
       margin: const EdgeInsets.all(10),
       decoration: const BoxDecoration(
         color: Color.fromARGB(0, 160, 163, 165),
@@ -32,8 +32,8 @@ class _MenuproductItemState extends State<MenuproductItem> {
       child: Column(
         children: [
           Container(
-            height: 300,
-            width: 350,
+            height: 350,
+            width: 420,
             clipBehavior: Clip.antiAlias,
             decoration: const BoxDecoration(
               color: Color.fromARGB(240, 222, 222, 255),
@@ -48,10 +48,11 @@ class _MenuproductItemState extends State<MenuproductItem> {
           Text(
             widget.title1,
             style: const TextStyle(
-                fontSize: 22,
-                fontFamily: 'ysabeau',
-                fontWeight: FontWeight.bold,
-                color: Colors.black),
+              fontSize: 22,
+              fontFamily: 'Ysabeau',
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
           ),
           const SizedBox(height: 10),
           Row(
@@ -60,16 +61,20 @@ class _MenuproductItemState extends State<MenuproductItem> {
               Text(
                 widget.price1,
                 style: TextStyle(
-                    fontSize: 20, fontFamily: 'ysabeau', color: greenColor),
+                  fontSize: 20,
+                  fontFamily: 'Ysabeau',
+                  color: greenColor,
+                ),
               ),
               const SizedBox(width: 10),
               Text(
                 widget.oldprice1,
                 style: const TextStyle(
-                    decoration: TextDecoration.lineThrough,
-                    fontSize: 20,
-                    fontFamily: 'ysabeau',
-                    color: Colors.black54),
+                  decoration: TextDecoration.lineThrough,
+                  fontSize: 20,
+                  fontFamily: 'Ysabeau',
+                  color: Colors.black54,
+                ),
               ),
             ],
           ),
@@ -85,10 +90,11 @@ class _MenuproductItemState extends State<MenuproductItem> {
             child: const Text(
               'Add to Cart',
               style: TextStyle(
-                  fontFamily: 'ysabeau',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black87),
+                fontFamily: 'Ysabeau',
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: Colors.black87,
+              ),
             ),
           ),
         ],

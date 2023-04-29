@@ -7,7 +7,7 @@ TextButtonItems(String name) {
       name,
       style: const TextStyle(
           fontSize: 17,
-          fontFamily: 'ysabeau',
+          fontFamily: 'Ysabeau',
           fontWeight: FontWeight.w500,
           color: Colors.black87),
     ),

@@ -10,7 +10,7 @@ TextButton BodyTextButtons(String name) {
     child: Text(
       name,
       style: const TextStyle(
-          fontFamily: 'ysabeau',
+          fontFamily: 'Ysabeau',
           fontSize: 40,
           fontWeight: FontWeight.w500,
           color: Colors.black54),

@@ -4,9 +4,11 @@ import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/appBar/menu_app_bar.dart';
 
 import '../widgets/body_text_button.dart';
+import '../widgets/comments_items.dart';
 import '../widgets/list_view_items.dart';
 import '../widgets/menu_body_product.dart';
 import '../widgets/menu_product_item.dart';
+import '../widgets/option_button_item.dart';
 import '../widgets/text_button_items.dart';
 
 class Home extends StatefulWidget {
@@ -240,7 +242,7 @@ class _HomeState extends State<Home> {
           // Products - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           const SizedBox(height: 30),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -275,6 +277,7 @@ class _HomeState extends State<Home> {
           // ListView - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
             height: 400,
+            padding: const EdgeInsets.symmetric(horizontal: 100),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -416,10 +419,10 @@ class _HomeState extends State<Home> {
                 flex: 2,
                 child: Container(
                   margin: const EdgeInsets.only(left: 150),
-                  height: 470,
+                  height: 460,
                   width: 125,
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(244, 248, 251, 255),
+                    color: Color.fromARGB(255, 244, 248, 251),
                   ),
                   child: Image.asset('assets/sofa_2.png'),
                 ),
@@ -428,10 +431,10 @@ class _HomeState extends State<Home> {
                 flex: 2,
                 child: Container(
                   margin: const EdgeInsets.only(right: 150),
-                  height: 470,
+                  height: 460,
                   width: 100,
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(244, 248, 251, 255),
+                    color: Color.fromARGB(255, 244, 248, 251),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -440,18 +443,18 @@ class _HomeState extends State<Home> {
                       const Text(
                         'New Arribal 2022',
                         style: TextStyle(
-                            fontFamily: 'ysabeau',
+                            fontFamily: 'Ysabeau',
                             fontSize: 70,
                             fontWeight: FontWeight.w500,
                             color: Colors.black54),
                       ),
                       const Text(
-                        'Non commodo sint culpa cillum elit nulla magna dolore ad. Veniam pariatur laboris ad dolore commodo sint eiusmod cillum ipsum. Sint ad ad reprehenderit sit dolore amet ut ad id Lorem pariatur occaecat labore. ',
-                        maxLines: 4,
+                        'Non commodo sint culpa cillum elit nulla magna dolore ad. Veniam pariatur laboris ad dolore commodo sint eiusmod cillum ipsum. Sint ad ad reprehenderit sit dolore amet ut ad id Lorem pariatur occaecat labore.',
+                        maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                            fontFamily: 'ysabeau',
-                            fontSize: 30,
+                            fontFamily: 'Ysabeau',
+                            fontSize: 18,
                             fontWeight: FontWeight.w500,
                             color: Colors.black45),
                       ),
@@ -466,7 +469,7 @@ class _HomeState extends State<Home> {
                         child: const Text(
                           'Shop Now',
                           style: TextStyle(
-                              fontFamily: 'ysabeau',
+                              fontFamily: 'Ysabeau',
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
                               color: Colors.white),
@@ -478,7 +481,7 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -494,6 +497,346 @@ class _HomeState extends State<Home> {
               const SizedBox(height: 200),
             ],
           ),
+          const SizedBox(height: 20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 100),
+            width: 400,
+            height: 400,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                CommentsItems('Jolene Mercer'),
+                CommentsItems('Wyatt Myers'),
+                CommentsItems('John Abraham'),
+                CommentsItems('Ethan Herrera'),
+              ],
+            ),
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              OptionButtonItem(
+                FontAwesomeIcons.truck,
+                'Free Shipping',
+                'Order Over \$90',
+              ),
+              OptionButtonItem(
+                Icons.replay_sharp,
+                'Easy Return',
+                'Withing 15 Days',
+              ),
+              OptionButtonItem(
+                Icons.lock_outline_rounded,
+                'Secure Payment',
+                'Online Shopping',
+              ),
+              OptionButtonItem(
+                Icons.card_giftcard_rounded,
+                'Best Offer',
+                'Guaranteed',
+              ),
+            ],
+          ),
+          const SizedBox(height: 100),
+          const Divider(),
+          Container(
+            height: 500,
+            width: 550,
+            child: Row(
+              children: [
+                Container(
+                  height: 460,
+                  width: 400,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.local_florist_rounded,
+                            size: 50,
+                            color: greenColor,
+                          ),
+                          const Text(
+                            'Leafy',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 30,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.phone,
+                            size: 30,
+                            color: Colors.black45,
+                          ),
+                          Text(
+                            '+60-001-004',
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.black87,
+                                fontFamily: 'Ysabeau'),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.markunread,
+                            size: 30,
+                            color: Colors.black54,
+                          ),
+                          Text(
+                            'example@Furniture.com',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.home,
+                            size: 30,
+                            color: Colors.black54,
+                          ),
+                          Text(
+                            '123, Main Street Anytown, 12345',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 460,
+                  width: 470,
+                  padding: EdgeInsets.only(left: 120),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Importan Links',
+                        style: TextStyle(
+                          fontFamily: 'Ysabeau',
+                          fontSize: 30,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black87,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Home',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> About Us',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Shop',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Blog',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Contact',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Order Track',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 460,
+                  width: 470,
+                  padding: EdgeInsets.only(right: 120),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'Services',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 30,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black87),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Home',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> About Us',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Shop',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Blog',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Contact',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        '> Order Track',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 460,
+                  width: 500,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Subscribe Updates',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 30,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black87),
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'Sign up to our mailing list now!',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'Enter Your Email',
+                        style: TextStyle(
+                            fontFamily: 'Usabeau',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54),
+                      ),
+                      const SizedBox(height: 50),
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          fixedSize: Size(400, 50),
+                          backgroundColor: greenColor,
+                          shape: BeveledRectangleBorder(
+                            side: BorderSide(color: greenColor),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: const Text(
+                          'Subcribe',
+                          style: TextStyle(
+                              fontFamily: 'Usabeau',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 100),
         ],
       ),
     );

@@ -7,14 +7,9 @@ Container listViewItem(String url, String title, String text) {
     margin: const EdgeInsets.all(10),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(0.4),
-      boxShadow: const [
-        BoxShadow(
-            blurStyle: BlurStyle.solid,
-            blurRadius: BorderSide.strokeAlignOutside,
-            color: Color.fromARGB(28, 0, 0, 0),
-            offset: Offset.zero),
-      ],
-      color: const Color.fromARGB(255, 255, 255, 255),
+      border: Border.all(
+        color: const Color.fromARGB(20, 0, 0, 0),
+      ),
     ),
     child: Column(
       children: [
@@ -22,18 +17,20 @@ Container listViewItem(String url, String title, String text) {
         Text(
           title,
           style: const TextStyle(
-              fontFamily: 'ysabeau',
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
-              color: Colors.black87),
+            fontFamily: 'Ysabeau',
+            fontSize: 25,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
         ),
         Text(
           text,
           style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'ysabeau',
-              color: Colors.black54),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Ysabeau',
+            color: Colors.black54,
+          ),
         ),
       ],
     ),
