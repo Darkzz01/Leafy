@@ -23,7 +23,7 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 0),
+        margin: const EdgeInsets.symmetric(horizontal: 5),
         decoration: const BoxDecoration(
           color: Color.fromARGB(0, 173, 173, 173),
         ),
