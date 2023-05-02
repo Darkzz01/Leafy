@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../data/dictionary.dart';
+import '../../data/dictionary.dart';
 
 CommentsItems(String name) {
   return Container(
     height: 300,
     width: 450,
     margin: const EdgeInsets.all(10),
-    decoration: const BoxDecoration(
-      color: Color.fromARGB(255, 255, 255, 255),
-    ),
+    decoration: const BoxDecoration(),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
