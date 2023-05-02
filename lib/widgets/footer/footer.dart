@@ -9,15 +9,16 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 475,
+      height: 465,
       width: 550,
       child: Row(
         children: [
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -31,7 +32,7 @@ class Footer extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: 'Ysabeau',
                         fontSize: 30,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         color: Colors.black87,
                       ),
                     ),
@@ -98,17 +99,19 @@ class Footer extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(width: 100),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
+                SizedBox(height: 30),
                 Text(
                   'Importan Links',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 30,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
                     color: Colors.black87,
                   ),
                 ),
@@ -117,7 +120,7 @@ class Footer extends StatelessWidget {
                   '> Home',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -127,7 +130,7 @@ class Footer extends StatelessWidget {
                   '> About Us',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -137,7 +140,7 @@ class Footer extends StatelessWidget {
                   '> Shop',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -147,7 +150,7 @@ class Footer extends StatelessWidget {
                   '> Blog',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -157,7 +160,7 @@ class Footer extends StatelessWidget {
                   '> Contact',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -167,7 +170,7 @@ class Footer extends StatelessWidget {
                   '> Order Track',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -177,14 +180,16 @@ class Footer extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
+                SizedBox(height: 30),
                 Text(
                   'Services',
                   style: TextStyle(
-                    fontFamily: 'Usabeau',
-                    fontSize: 30,
-                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Ysabeau',
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
                     color: Colors.black87,
                   ),
                 ),
@@ -193,7 +198,7 @@ class Footer extends StatelessWidget {
                   '> Home',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -203,7 +208,7 @@ class Footer extends StatelessWidget {
                   '> About Us',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -213,7 +218,7 @@ class Footer extends StatelessWidget {
                   '> Shop',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -223,7 +228,7 @@ class Footer extends StatelessWidget {
                   '> Blog',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -233,7 +238,7 @@ class Footer extends StatelessWidget {
                   '> Contact',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -243,7 +248,7 @@ class Footer extends StatelessWidget {
                   '> Order Track',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
@@ -253,15 +258,16 @@ class Footer extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 50),
                 const Text(
                   'Subscribe Updates',
                   style: TextStyle(
-                    fontFamily: 'Usabeau',
-                    fontSize: 30,
-                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Ysabeau',
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
                     color: Colors.black87,
                   ),
                 ),
@@ -270,36 +276,34 @@ class Footer extends StatelessWidget {
                   'Sign up to our mailing list now!',
                   style: TextStyle(
                     fontFamily: 'Usabeau',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black54,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                const Text(
-                  'Enter Your Email',
-                  style: TextStyle(
-                    fontFamily: 'Usabeau',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     color: Colors.black54,
                   ),
                 ),
                 const SizedBox(height: 50),
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    fixedSize: const Size(400, 50),
+                const Text(
+                  'Enter Your Email',
+                  style: TextStyle(
+                    fontFamily: 'Usabeau',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black54,
+                  ),
+                ),
+                const SizedBox(height: 50),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(400, 55),
                     backgroundColor: greenColor,
-                    shape: BeveledRectangleBorder(
-                      side: BorderSide(color: greenColor),
-                    ),
+                    shape: const BeveledRectangleBorder(side: BorderSide.none),
                   ),
                   onPressed: () {},
                   child: const Text(
                     'Subcribe',
                     style: TextStyle(
                       fontFamily: 'Usabeau',
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
                     ),

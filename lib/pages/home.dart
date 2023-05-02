@@ -549,7 +549,9 @@ class _HomeState extends State<Home> {
             ),
           ),
           const SizedBox(height: 100),
-          Divider(color: Colors.black.withOpacity(0.08)),
+          Divider(
+            color: Colors.black.withOpacity(0.08),
+          ),
           // Footer  - - - - - - - - - - - - - - - - - - - - - - - - - //
           const Footer(),
         ],
