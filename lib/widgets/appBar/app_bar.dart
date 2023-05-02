@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
-import './menu_app_bar_action.dart';
-import 'menu_app_bar_option.dart';
+import 'app_bar_action.dart';
+import 'app_bar_option.dart';
 
 class MenuAppBar extends StatelessWidget {
   const MenuAppBar({

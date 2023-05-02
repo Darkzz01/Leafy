@@ -9,8 +9,8 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 90),
       height: 465,
-      width: 550,
       child: Row(
         children: [
           Expanded(
@@ -20,7 +20,6 @@ class Footer extends StatelessWidget {
               children: [
                 const SizedBox(height: 30),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
                       Icons.local_florist_rounded,
@@ -40,31 +39,32 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(
                       Icons.phone,
-                      size: 30,
+                      size: 20,
                       color: Colors.black45,
                     ),
+                    SizedBox(width: 5),
                     Text(
                       '+60-001-004',
                       style: TextStyle(
-                          fontSize: 30,
-                          color: Colors.black87,
-                          fontFamily: 'Ysabeau'),
+                        fontSize: 25,
+                        color: Colors.black54,
+                        fontFamily: 'Ysabeau',
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 30),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(
                       Icons.markunread,
-                      size: 30,
+                      size: 20,
                       color: Colors.black54,
                     ),
+                    SizedBox(width: 5),
                     Text(
                       'example@Furniture.com',
                       style: TextStyle(
@@ -78,20 +78,20 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(
                       Icons.home,
-                      size: 30,
+                      size: 20,
                       color: Colors.black54,
                     ),
+                    SizedBox(width: 5),
                     Text(
                       '123, Main Street Anytown, 12345',
                       style: TextStyle(
                         fontFamily: 'Ysabeau',
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
-                        color: Colors.black87,
+                        color: Colors.black54,
                       ),
                     ),
                   ],
@@ -294,7 +294,7 @@ class Footer extends StatelessWidget {
                 const SizedBox(height: 50),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(400, 55),
+                    fixedSize: const Size(400, 50),
                     backgroundColor: greenColor,
                     shape: const BeveledRectangleBorder(side: BorderSide.none),
                   ),

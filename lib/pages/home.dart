@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:leafy/data/dictionary.dart';
-import 'package:leafy/widgets/appBar/menu_app_bar.dart';
+import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/footer/footer.dart';
 
 import '../widgets/body/body_text_button.dart';
-import '../widgets/body/comments_items.dart';
-import '../widgets/body/list_view_items.dart';
-import '../widgets/body/menu_body_product.dart';
+import '../widgets/body/body_comments.dart';
+import '../widgets/body/body_list_view.dart';
+import '../widgets/body/body_product.dart';
 import '../widgets/body/menu_product_item.dart';
 import '../widgets/body/option_button_item.dart';
 import '../widgets/body/text_button_items.dart';
@@ -278,7 +278,7 @@ class _HomeState extends State<Home> {
           // ListView - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
             height: 400,
-            padding: const EdgeInsets.symmetric(horizontal: 100),
+            padding: const EdgeInsets.symmetric(horizontal: 70),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -350,7 +350,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           const SizedBox(height: 70),
-          // Text buttons items - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+          // Text buttons items - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -369,6 +369,12 @@ class _HomeState extends State<Home> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                MenuBodyProduct(
+                  title: 'Odrex Double Bed',
+                  image: 'assets/listview_4.png',
+                  price: 7500.00,
+                  oldPrice: 8000.00,
+                ),
                 MenuproductItem(
                   url1: 'assets/listview_4.png',
                   title1: 'Odrex Double Bed',
@@ -552,7 +558,7 @@ class _HomeState extends State<Home> {
           Divider(
             color: Colors.black.withOpacity(0.08),
           ),
-          // Footer  - - - - - - - - - - - - - - - - - - - - - - - - - //
+          // Footer  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           const Footer(),
         ],
       ),

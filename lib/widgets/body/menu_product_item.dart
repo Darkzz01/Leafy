@@ -28,7 +28,7 @@ class _MenuproductItemState extends State<MenuproductItem> {
         width: 420,
         margin: const EdgeInsets.all(10),
         decoration: const BoxDecoration(
-          color: Color.fromARGB(0, 160, 163, 165),
+          color: Color.fromARGB(0, 0, 0, 0),
         ),
         child: Column(
           children: [
@@ -37,7 +37,7 @@ class _MenuproductItemState extends State<MenuproductItem> {
               width: 420,
               clipBehavior: Clip.antiAlias,
               decoration: const BoxDecoration(
-                color: Color.fromARGB(240, 222, 222, 255),
+                color: Color.fromARGB(255, 240, 222, 222),
               ),
               child: Image.asset(
                 widget.url1,
