@@ -46,12 +46,24 @@ class MenuAppBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  menuAppBarOption('Home'),
-                  menuAppBarOption('About Us'),
-                  menuAppBarOption('Shop'),
-                  menuAppBarOption('Blog'),
-                  menuAppBarOption('Contact'),
-                  menuAppBarOption('Order Track'),
+                  MenuAppBarOption(
+                    title: 'Home',
+                  ),
+                  MenuAppBarOption(
+                    title: 'About Us',
+                  ),
+                  MenuAppBarOption(
+                    title: 'Shop',
+                  ),
+                  MenuAppBarOption(
+                    title: 'Blog',
+                  ),
+                  MenuAppBarOption(
+                    title: 'Contact',
+                  ),
+                  MenuAppBarOption(
+                    title: 'Order Track',
+                  ),
                 ],
               ),
             ),

@@ -27,19 +27,22 @@ class _MenuAppBarActionState extends State<MenuAppBarAction> {
         iconColor = Colors.black54;
         setState(() {});
       },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
-        height: 50,
-        width: 50,
-        decoration: BoxDecoration(
-          color: backgroundColor,
-        ),
-        child: RotatedBox(
-          quarterTurns: widget.quarter,
-          child: Icon(
-            widget.icon,
-            size: 25,
-            color: iconColor,
+      child: GestureDetector(
+        onTap: () {},
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 250),
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+          ),
+          child: RotatedBox(
+            quarterTurns: widget.quarter,
+            child: Icon(
+              widget.icon,
+              size: 25,
+              color: iconColor,
+            ),
           ),
         ),
       ),

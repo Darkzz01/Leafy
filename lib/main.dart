@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/pages/shop.dart';
 
 import 'pages/home.dart';
 
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Leafy',
-      initialRoute: '/',
+      initialRoute: '/shop',
       theme: ThemeData(
         useMaterial3: true,
       ),
       routes: {
         '/': (context) => const Home(),
+        '/shop': (context) => Shop(),
       },
     );
   }

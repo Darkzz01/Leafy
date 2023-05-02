@@ -8,11 +8,13 @@ class MenuBodyProduct extends StatefulWidget {
     required this.image,
     required this.price,
     required this.oldPrice,
+    required this.banner,
   }) : super(key: key);
   String title;
   String image;
   double price;
   double oldPrice;
+  bool banner;
 
   @override
   State<MenuBodyProduct> createState() => _MenuBodyProductState();
@@ -31,8 +33,8 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
           children: [
             Container(
               height: 310,
-              width: 420,
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              width: 390,
+              clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 222, 222, 222),
                 borderRadius: BorderRadius.circular(5),
@@ -40,28 +42,35 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
               child: Stack(
                 children: [
                   Center(
-                    child: Image.asset(widget.image),
-                  ),
-                  Positioned(
-                    top: 0,
-                    right: 0,
-                    child: Container(
-                      height: 25,
-                      width: 80,
-                      decoration: const BoxDecoration(
-                        color: Color.fromRGBO(89, 178, 126, 1),
-                      ),
-                      child: const Text(
-                        '100 Sales',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Ysabeau',
-                          color: Colors.white,
-                        ),
-                      ),
+                    child: Image.asset(
+                      widget.image,
+                      height: double.infinity,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
                     ),
                   ),
+                  widget.banner
+                      ? Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Container(
+                            height: 25,
+                            width: 80,
+                            decoration: const BoxDecoration(
+                              color: Color.fromRGBO(89, 178, 126, 1),
+                            ),
+                            child: const Text(
+                              '100 Sales',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Ysabeau',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
             ),

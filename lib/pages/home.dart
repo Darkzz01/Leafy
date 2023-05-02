@@ -8,7 +8,6 @@ import '../widgets/body/body_text_button.dart';
 import '../widgets/body/body_comments.dart';
 import '../widgets/body/body_list_view.dart';
 import '../widgets/body/body_product.dart';
-import '../widgets/body/menu_product_item.dart';
 import '../widgets/body/option_button_item.dart';
 import '../widgets/body/text_button_items.dart';
 
@@ -248,24 +247,28 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MenuBodyProduct(
+                  banner: true,
                   title: 'Small Dinning Table',
                   image: 'assets/product_0.png',
                   price: 200.00,
                   oldPrice: 500.00,
                 ),
                 MenuBodyProduct(
+                  banner: true,
                   title: 'Doug Wooden Table',
                   image: 'assets/product_1.png',
                   price: 100.00,
                   oldPrice: 300.00,
                 ),
                 MenuBodyProduct(
+                  banner: true,
                   title: 'Bamboo Forniture',
                   image: 'assets/product_3.png',
                   price: 350.00,
                   oldPrice: 700.00,
                 ),
                 MenuBodyProduct(
+                  banner: true,
                   title: 'Stylish Hall Room Chair',
                   image: 'assets/product_2.png',
                   price: 400.00,
@@ -370,61 +373,64 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MenuBodyProduct(
-                  title: 'Odrex Double Bed',
+                  banner: false,
                   image: 'assets/listview_4.png',
-                  price: 7500.00,
-                  oldPrice: 8000.00,
+                  title: 'Odrex Double Bed',
+                  price: 7500.0,
+                  oldPrice: 8000.0,
                 ),
-                MenuproductItem(
-                  url1: 'assets/listview_4.png',
-                  title1: 'Odrex Double Bed',
-                  price1: '7,500.0',
-                  oldprice1: '8,000.0',
-                ),
-                MenuproductItem(
-                    url1: 'assets/listview_6.png',
-                    title1: 'Angle Double Bed',
-                    price1: '7,500.0',
-                    oldprice1: '8,000.0'),
-                MenuproductItem(
-                    url1: 'assets/listview_7.png',
-                    title1: 'Phonex Double Bed',
-                    price1: '7,500.0',
-                    oldprice1: '8,000.0'),
-                MenuproductItem(
-                    url1: 'assets/listview_2.png',
-                    title1: 'Care Wood Stool',
-                    price1: '7,500.0',
-                    oldprice1: '8,000.0'),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_6.png',
+                    title: 'Angle Double Bed',
+                    price: 7500.0,
+                    oldPrice: 8000.0),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_7.png',
+                    title: 'Phonex Double Bed',
+                    price: 7500.0,
+                    oldPrice: 8000.0),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_2.png',
+                    title: 'Care Wood Stool',
+                    price: 7500.0,
+                    oldPrice: 8000.0),
               ],
             ),
           ),
+          const SizedBox(height: 30),
           // Row 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MenuproductItem(
-                    url1: 'assets/listview_8.png',
-                    title1: 'Obhai Almirah',
-                    price1: '700.0',
-                    oldprice1: '800.0'),
-                MenuproductItem(
-                    url1: 'assets/listview_9.png',
-                    title1: 'Bamboo Table',
-                    price1: '750.0',
-                    oldprice1: '800.0'),
-                MenuproductItem(
-                    url1: 'assets/listview_10.png',
-                    title1: 'Red Wood Almirah',
-                    price1: '7,500.0',
-                    oldprice1: '8,000.0'),
-                MenuproductItem(
-                    url1: 'assets/listview_11.png',
-                    title1: 'Raymond Wood Bed',
-                    price1: '7,500.0',
-                    oldprice1: '8,000.0'),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_8.png',
+                    title: 'Obhai Almirah',
+                    price: 700.0,
+                    oldPrice: 800.0),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_9.png',
+                    title: 'Bamboo Table',
+                    price: 750.0,
+                    oldPrice: 800.0),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_10.png',
+                    title: 'Red Wood Almirah',
+                    price: 7500.0,
+                    oldPrice: 8000.0),
+                MenuBodyProduct(
+                    banner: false,
+                    image: 'assets/listview_11.png',
+                    title: 'Raymond Wood Bed',
+                    price: 7500.0,
+                    oldPrice: 8000.0),
               ],
             ),
           ),
