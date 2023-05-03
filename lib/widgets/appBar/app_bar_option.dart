@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MenuAppBarOption extends StatefulWidget {
-  MenuAppBarOption({Key? key, required this.title}) : super(key: key);
-  String title;
+  const MenuAppBarOption({Key? key, required this.title}) : super(key: key);
+  final String title;
+
   @override
   State<MenuAppBarOption> createState() => _MenuAppBarOptionState();
 }
@@ -15,6 +16,9 @@ class _MenuAppBarOptionState extends State<MenuAppBarOption> {
         foregroundColor: const Color.fromARGB(255, 44, 136, 47),
       ),
       onPressed: () {
+        if (widget.title == 'Home') {
+          Navigator.pop(context);
+        }
         if (widget.title == 'Shop') {
           Navigator.pushNamed(context, '/shop');
         }

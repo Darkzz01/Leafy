@@ -45,7 +45,7 @@ class MenuAppBar extends StatelessWidget {
             child: Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   MenuAppBarOption(
                     title: 'Home',
                   ),
