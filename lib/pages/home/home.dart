@@ -4,12 +4,12 @@ import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/footer/footer.dart';
 
-import '../widgets/body/body_text_button.dart';
-import '../widgets/body/body_comments.dart';
-import '../widgets/body/body_list_view.dart';
-import '../widgets/body/body_product.dart';
-import '../widgets/body/option_button_item.dart';
-import '../widgets/body/text_button_items.dart';
+import '../../widgets/body/body_text_button.dart';
+import '../../widgets/body/body_comments.dart';
+import '../../widgets/body/body_list_view.dart';
+import '../../widgets/body/body_product.dart';
+import '../../widgets/body/option_button_item.dart';
+import '../../widgets/body/text_button_items.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -245,13 +245,14 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 MenuBodyProduct(
                   banner: true,
                   title: 'Small Dinning Table',
                   image: 'assets/product_0.png',
                   price: 200.00,
                   oldPrice: 500.00,
+                  showButton: true,
                 ),
                 MenuBodyProduct(
                   banner: true,
@@ -259,6 +260,7 @@ class _HomeState extends State<Home> {
                   image: 'assets/product_1.png',
                   price: 100.00,
                   oldPrice: 300.00,
+                  showButton: true,
                 ),
                 MenuBodyProduct(
                   banner: true,
@@ -266,6 +268,7 @@ class _HomeState extends State<Home> {
                   image: 'assets/product_3.png',
                   price: 350.00,
                   oldPrice: 700.00,
+                  showButton: true,
                 ),
                 MenuBodyProduct(
                   banner: true,
@@ -273,6 +276,7 @@ class _HomeState extends State<Home> {
                   image: 'assets/product_2.png',
                   price: 400.00,
                   oldPrice: 850.00,
+                  showButton: true,
                 ),
               ],
             ),
@@ -371,32 +375,39 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 MenuBodyProduct(
                   banner: false,
                   image: 'assets/listview_4.png',
                   title: 'Odrex Double Bed',
                   price: 7500.0,
                   oldPrice: 8000.0,
+                  showButton: true,
                 ),
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_6.png',
-                    title: 'Angle Double Bed',
-                    price: 7500.0,
-                    oldPrice: 8000.0),
+                  banner: false,
+                  image: 'assets/listview_6.png',
+                  title: 'Angle Double Bed',
+                  price: 7500.0,
+                  oldPrice: 8000.0,
+                  showButton: true,
+                ),
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_7.png',
-                    title: 'Phonex Double Bed',
-                    price: 7500.0,
-                    oldPrice: 8000.0),
+                  banner: false,
+                  image: 'assets/listview_7.png',
+                  title: 'Phonex Double Bed',
+                  price: 7500.0,
+                  oldPrice: 8000.0,
+                  showButton: true,
+                ),
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_2.png',
-                    title: 'Care Wood Stool',
-                    price: 7500.0,
-                    oldPrice: 8000.0),
+                  banner: false,
+                  image: 'assets/listview_2.png',
+                  title: 'Care Wood Stool',
+                  price: 7500.0,
+                  oldPrice: 8000.0,
+                  showButton: true,
+                ),
               ],
             ),
           ),
@@ -406,34 +417,43 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_8.png',
-                    title: 'Obhai Almirah',
-                    price: 700.0,
-                    oldPrice: 800.0),
+                  banner: false,
+                  image: 'assets/listview_8.png',
+                  title: 'Obhai Almirah',
+                  price: 700.0,
+                  oldPrice: 800.0,
+                  showButton: true,
+                ),
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_9.png',
-                    title: 'Bamboo Table',
-                    price: 750.0,
-                    oldPrice: 800.0),
+                  banner: false,
+                  image: 'assets/listview_9.png',
+                  title: 'Bamboo Table',
+                  price: 750.0,
+                  oldPrice: 800.0,
+                  showButton: true,
+                ),
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_10.png',
-                    title: 'Red Wood Almirah',
-                    price: 7500.0,
-                    oldPrice: 8000.0),
+                  banner: false,
+                  image: 'assets/listview_10.png',
+                  title: 'Red Wood Almirah',
+                  price: 7500.0,
+                  oldPrice: 8000.0,
+                  showButton: true,
+                ),
                 MenuBodyProduct(
-                    banner: false,
-                    image: 'assets/listview_11.png',
-                    title: 'Raymond Wood Bed',
-                    price: 7500.0,
-                    oldPrice: 8000.0),
+                  banner: false,
+                  image: 'assets/listview_11.png',
+                  title: 'Raymond Wood Bed',
+                  price: 7500.0,
+                  oldPrice: 8000.0,
+                  showButton: true,
+                ),
               ],
             ),
           ),
+          const SizedBox(height: 100),
           // Main container - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
             height: 510,

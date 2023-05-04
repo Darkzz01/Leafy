@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:leafy/data/dictionary.dart';
 
 class MenuBodyProduct extends StatefulWidget {
-  MenuBodyProduct({
+  const MenuBodyProduct({
     Key? key,
     required this.title,
     required this.image,
     required this.price,
     required this.oldPrice,
     required this.banner,
+    required this.showButton,
   }) : super(key: key);
-  String title;
-  String image;
-  double price;
-  double oldPrice;
-  bool banner;
+
+  final String title;
+  final String image;
+  final double price;
+  final double oldPrice;
+  final bool banner;
+  final bool showButton;
 
   @override
   State<MenuBodyProduct> createState() => _MenuBodyProductState();
 }
 
 class _MenuBodyProductState extends State<MenuBodyProduct> {
+  final formatCurrency = NumberFormat.simpleCurrency();
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -30,6 +36,9 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
           color: Color.fromARGB(0, 173, 173, 173),
         ),
         child: Column(
+          crossAxisAlignment: widget.showButton
+              ? CrossAxisAlignment.center
+              : CrossAxisAlignment.start,
           children: [
             Container(
               height: 310,
@@ -42,11 +51,14 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
               child: Stack(
                 children: [
                   Center(
-                    child: Image.asset(
-                      widget.image,
-                      height: double.infinity,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image.asset(
+                        widget.image,
+                        height: double.infinity,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   widget.banner
@@ -80,17 +92,19 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontFamily: 'Ysabeau',
-                fontSize: 20,
+                fontSize: 22,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
               ),
             ),
             const SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: widget.showButton
+                  ? MainAxisAlignment.center
+                  : MainAxisAlignment.start,
               children: [
                 Text(
-                  '\$${widget.price}',
+                  formatCurrency.format(widget.price),
                   style: TextStyle(
                     fontSize: 20,
                     color: greenColor,
@@ -99,7 +113,7 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
                 ),
                 const SizedBox(width: 10),
                 Text(
-                  '\$${widget.oldPrice}',
+                  formatCurrency.format(widget.oldPrice),
                   style: const TextStyle(
                     color: Colors.black45,
                     decoration: TextDecoration.lineThrough,
@@ -109,28 +123,30 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
               ],
             ),
             const SizedBox(height: 14),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 22, horizontal: 30),
-                foregroundColor: Colors.green,
-                shape: const BeveledRectangleBorder(),
-                side: BorderSide(
-                  color: greenColor,
-                  width: 1,
-                ),
-              ),
-              onPressed: () {},
-              child: Text(
-                'Add to Cart',
-                style: TextStyle(
-                  fontFamily: 'Ysabeau',
-                  fontSize: 17,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black.withOpacity(0.6),
-                ),
-              ),
-            ),
+            widget.showButton
+                ? OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 22, horizontal: 30),
+                      foregroundColor: Colors.green,
+                      shape: const BeveledRectangleBorder(),
+                      side: BorderSide(
+                        color: greenColor,
+                        width: 1,
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'Add to Cart',
+                      style: TextStyle(
+                        fontFamily: 'Ysabeau',
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black.withOpacity(0.6),
+                      ),
+                    ),
+                  )
+                : Container(),
           ],
         ),
       ),

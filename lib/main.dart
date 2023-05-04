@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:leafy/pages/shop.dart';
+import 'package:leafy/pages/shop/shop.dart';
 
-import 'pages/home.dart';
+import 'pages/home/home.dart';
 
 void main() => runApp(const MyApp());
 
