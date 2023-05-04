@@ -114,6 +114,7 @@ class _BodyState extends State<Body> {
                             oldPrice: 2500,
                             banner: true,
                             showButton: false,
+                            isExpanded: false,
                           ),
                       ],
                     ),

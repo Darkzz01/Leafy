@@ -253,6 +253,7 @@ class _HomeState extends State<Home> {
                   price: 200.00,
                   oldPrice: 500.00,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: true,
@@ -261,6 +262,7 @@ class _HomeState extends State<Home> {
                   price: 100.00,
                   oldPrice: 300.00,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: true,
@@ -269,6 +271,7 @@ class _HomeState extends State<Home> {
                   price: 350.00,
                   oldPrice: 700.00,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: true,
@@ -277,6 +280,7 @@ class _HomeState extends State<Home> {
                   price: 400.00,
                   oldPrice: 850.00,
                   showButton: true,
+                  isExpanded: true,
                 ),
               ],
             ),
@@ -383,6 +387,7 @@ class _HomeState extends State<Home> {
                   price: 7500.0,
                   oldPrice: 8000.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: false,
@@ -391,6 +396,7 @@ class _HomeState extends State<Home> {
                   price: 7500.0,
                   oldPrice: 8000.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: false,
@@ -399,6 +405,7 @@ class _HomeState extends State<Home> {
                   price: 7500.0,
                   oldPrice: 8000.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: false,
@@ -407,6 +414,7 @@ class _HomeState extends State<Home> {
                   price: 7500.0,
                   oldPrice: 8000.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
               ],
             ),
@@ -425,6 +433,7 @@ class _HomeState extends State<Home> {
                   price: 700.0,
                   oldPrice: 800.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: false,
@@ -433,6 +442,7 @@ class _HomeState extends State<Home> {
                   price: 750.0,
                   oldPrice: 800.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: false,
@@ -441,6 +451,7 @@ class _HomeState extends State<Home> {
                   price: 7500.0,
                   oldPrice: 8000.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
                 MenuBodyProduct(
                   banner: false,
@@ -449,6 +460,7 @@ class _HomeState extends State<Home> {
                   price: 7500.0,
                   oldPrice: 8000.0,
                   showButton: true,
+                  isExpanded: true,
                 ),
               ],
             ),
