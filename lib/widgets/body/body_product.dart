@@ -27,8 +27,6 @@ class MenuBodyProduct extends StatefulWidget {
 }
 
 class _MenuBodyProductState extends State<MenuBodyProduct> {
-  final formatCurrency = NumberFormat.simpleCurrency();
-
   @override
   Widget build(BuildContext context) {
     return widget.isExpanded

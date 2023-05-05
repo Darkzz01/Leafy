@@ -42,7 +42,7 @@ class _SideBarState extends State<SideBar> {
       child: Container(
         // color: Colors.green.shade100,
         padding: const EdgeInsets.symmetric(horizontal: 50),
-        height: 1700,
+        height: 2500,
         child: Column(
           children: [
             // Search - - - - - - - - - - - - - - - - - - - - //
@@ -129,21 +129,124 @@ class _SideBarState extends State<SideBar> {
                   ),
                 ),
                 const SizedBox(height: 10),
-                Container(
-                  height: 60,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 2,
-                      color: Colors.black12,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Bamboo Forniture',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
-                  ),
-                  child: const Banner(
-                    location: BannerLocation.topEnd,
-                    message: 'Zaquiel',
-                    color: Color.fromARGB(255, 191, 26, 14),
-                    child: Placeholder(),
-                  ),
+                    Text(
+                      '02',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Wikker or ratten Forniture',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      '04',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Metal Forniture',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      '02',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Plastic Forniture',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      '01',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Glass Forniture',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      '05',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black87,
+                        fontFamily: 'Ysabeau',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

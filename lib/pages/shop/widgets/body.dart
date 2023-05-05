@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/body/body_product.dart';
+
+import 'menu_body_product_full.dart';
 
 class Body extends StatefulWidget {
   const Body({
@@ -18,7 +21,7 @@ class _BodyState extends State<Body> {
     return Expanded(
       flex: 2,
       child: Container(
-        height: 1700,
+        height: 2500,
         margin: const EdgeInsets.only(right: 30),
         child: Column(
           children: [
@@ -35,21 +38,80 @@ class _BodyState extends State<Body> {
                   ),
                 ),
                 const SizedBox(width: 20),
-                Container(
-                  height: 50,
-                  width: 200,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 2,
-                      color: Colors.black12,
+                PopupMenuButton(
+                  offset: const Offset(0, 50),
+                  itemBuilder: (context) {
+                    return [
+                      PopupMenuItem(
+                        value: 'option',
+                        child: Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(0, 0, 0, 0),
+                            borderRadius: BorderRadius.circular(5),
+                            border: Border.all(
+                              color: Colors.black12,
+                            ),
+                          ),
+                          child: const TextField(
+                            cursorColor: Colors.black,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: '...',
+                              hintStyle: TextStyle(
+                                fontFamily: 'Ysabeau',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const PopupMenuItem(
+                        child: Text('Sort By Date'),
+                      ),
+                      const PopupMenuItem(
+                        child: Text('Sort By Name'),
+                      ),
+                      const PopupMenuItem(
+                        child: Text('Sort By Popularity'),
+                      ),
+                      const PopupMenuItem(
+                        child: Text('lowest to Highest'),
+                      ),
+                      const PopupMenuItem(
+                        child: Text('Highest to Lowest'),
+                      ),
+                    ];
+                  },
+                  child: Container(
+                    height: 45,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(color: Colors.black54),
                     ),
-                  ),
-                  child: const Banner(
-                    location: BannerLocation.topEnd,
-                    message: 'Zaquiel',
-                    color: Color.fromARGB(255, 191, 26, 14),
-                    child: Placeholder(),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text(
+                          'Sort By Date',
+                          style: TextStyle(
+                            fontFamily: 'Ysabeau',
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_drop_down_outlined,
+                          size: 20,
+                          color: Colors.black54,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(width: 20),
@@ -79,23 +141,37 @@ class _BodyState extends State<Body> {
             Expanded(
               child: showListView
                   ? ListView(
-                      children: [
-                        Container(
-                          height: 500,
-                          width: 200,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 2,
-                              color: Colors.black12,
-                            ),
-                          ),
-                          child: const Banner(
-                            location: BannerLocation.topEnd,
-                            message: 'Zaquiel',
-                            color: Color.fromARGB(255, 191, 26, 14),
-                            child: Placeholder(),
-                          ),
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: const [
+                        MenuBodyProductFull(
+                          image: 'assets/listview_5.png',
+                          title: 'Glass Top Coffee Table',
+                          price: 7500,
+                          oldPrice: 8000,
+                        ),
+                        MenuBodyProductFull(
+                          image: 'assets/listview_6.png',
+                          title: 'Angle Double Bed',
+                          price: 7500,
+                          oldPrice: 8000,
+                        ),
+                        MenuBodyProductFull(
+                          image: 'assets/listview_4.png',
+                          title: 'Odrex Double Bed',
+                          price: 7500,
+                          oldPrice: 8000,
+                        ),
+                        MenuBodyProductFull(
+                          image: 'assets/listview_6.png',
+                          title: 'Phonex Double Bed',
+                          price: 7500,
+                          oldPrice: 8000,
+                        ),
+                        MenuBodyProductFull(
+                          image: 'assets/listview_8.png',
+                          title: 'Obhai almirah',
+                          price: 7500,
+                          oldPrice: 8000,
                         ),
                       ],
                     )
