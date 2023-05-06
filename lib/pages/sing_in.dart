@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/footer/footer.dart';
 
-import 'appBar/app_bar.dart';
+import '../widgets/appBar/app_bar.dart';
 
 class SingIn extends StatefulWidget {
-  SingIn({Key? key}) : super(key: key);
+  const SingIn({Key? key}) : super(key: key);
 
   @override
   State<SingIn> createState() => _SingInState();

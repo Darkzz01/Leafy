@@ -5,7 +5,7 @@ import 'package:leafy/widgets/footer/footer.dart';
 import '../data/dictionary.dart';
 
 class SingUp extends StatefulWidget {
-  SingUp({Key? key}) : super(key: key);
+  const SingUp({Key? key}) : super(key: key);
 
   @override
   State<SingUp> createState() => _SingUpState();

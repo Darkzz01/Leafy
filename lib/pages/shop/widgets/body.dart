@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/body/body_product.dart';
 
 import 'menu_body_product_full.dart';
@@ -79,7 +78,7 @@ class _BodyState extends State<Body> {
                         child: Text('Sort By Popularity'),
                       ),
                       const PopupMenuItem(
-                        child: Text('lowest to Highest'),
+                        child: Text('Lowest to Highest'),
                       ),
                       const PopupMenuItem(
                         child: Text('Highest to Lowest'),

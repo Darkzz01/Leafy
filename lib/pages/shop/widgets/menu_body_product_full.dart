@@ -18,8 +18,8 @@ class MenuBodyProductFull extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 450,
-      width: 200,
+      height: 400,
+      width: 150,
       margin: const EdgeInsets.symmetric(vertical: 5),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
@@ -83,9 +83,10 @@ class MenuBodyProductFull extends StatelessWidget {
                 color: Color.fromARGB(0, 4, 20, 48),
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 100),
+                  const SizedBox(),
                   Text(
                     title,
                     style: const TextStyle(
@@ -95,7 +96,6 @@ class MenuBodyProductFull extends StatelessWidget {
                       color: Colors.black87,
                     ),
                   ),
-                  const SizedBox(height: 20),
                   Row(
                     children: [
                       Text(
@@ -120,21 +120,18 @@ class MenuBodyProductFull extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
                   const Text(
                     'Shipping & Import Fees Deposit to Bangladesh',
                     style: TextStyle(
                       fontFamily: 'Ysabeau',
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w400,
                       color: Colors.black54,
                     ),
                   ),
-                  const SizedBox(height: 40),
                   const Divider(
                     color: Color.fromARGB(22, 0, 0, 0),
                   ),
-                  const SizedBox(height: 50),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -177,6 +174,7 @@ class MenuBodyProductFull extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(),
                 ],
               ),
             ),
