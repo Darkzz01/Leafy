@@ -98,7 +98,16 @@ class MenuAppBar extends StatelessWidget {
                   quarter: 0,
                   icon: Icons.person_outline_outlined,
                 ),
-                const SizedBox(width: 60),
+                SizedBox(width: 10),
+                MenuAppBarAction(
+                  quarter: 0,
+                  icon: Icons.login_rounded,
+                ),
+                const SizedBox(width: 10),
+                MenuAppBarAction(
+                  quarter: 0,
+                  icon: Icons.logout_rounded,
+                ),
               ],
             ),
           ),

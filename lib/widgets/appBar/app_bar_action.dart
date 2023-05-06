@@ -25,10 +25,18 @@ class _MenuAppBarActionState extends State<MenuAppBarAction> {
       onExit: (event) {
         backgroundColor = Colors.black.withOpacity(0.03);
         iconColor = Colors.black54;
+
         setState(() {});
       },
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          if (widget.icon == Icons.login_rounded) {
+            Navigator.pushNamed(context, 'sing in');
+          }
+          if (widget.icon == Icons.logout_rounded) {
+            Navigator.pushNamed(context, 'sing up');
+          }
+        },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           height: 50,
