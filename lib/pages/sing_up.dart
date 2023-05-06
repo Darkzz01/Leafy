@@ -14,6 +14,7 @@ class SingUp extends StatefulWidget {
 class _SingUpState extends State<SingUp> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
         children: [
@@ -82,8 +83,8 @@ class _SingUpState extends State<SingUp> {
           ),
           const SizedBox(height: 50),
           Container(
-            height: 1300,
-            margin: const EdgeInsets.symmetric(horizontal: 650),
+            height: 1000,
+            margin: EdgeInsets.symmetric(horizontal: size.width / 4.7),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -109,7 +110,7 @@ class _SingUpState extends State<SingUp> {
                   'name*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 15,
+                    fontSize: 17,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
@@ -117,9 +118,8 @@ class _SingUpState extends State<SingUp> {
                 const SizedBox(height: 30),
                 Container(
                   height: 42,
-                  width: 500,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
                     ),
@@ -134,7 +134,7 @@ class _SingUpState extends State<SingUp> {
                         fontFamily: 'Ysabeau',
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black45,
+                        color: Colors.black87,
                       ),
                     ),
                   ),
@@ -144,7 +144,7 @@ class _SingUpState extends State<SingUp> {
                   'UserName*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 15,
+                    fontSize: 17,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
@@ -152,9 +152,8 @@ class _SingUpState extends State<SingUp> {
                 const SizedBox(height: 30),
                 Container(
                   height: 42,
-                  width: 500,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
                     ),
@@ -169,7 +168,7 @@ class _SingUpState extends State<SingUp> {
                         fontFamily: 'Ysabeau',
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black45,
+                        color: Colors.black87,
                       ),
                     ),
                   ),
@@ -179,7 +178,7 @@ class _SingUpState extends State<SingUp> {
                   'Address*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 15,
+                    fontSize: 17,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
@@ -187,9 +186,8 @@ class _SingUpState extends State<SingUp> {
                 const SizedBox(height: 30),
                 Container(
                   height: 42,
-                  width: 500,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
                     ),
@@ -204,7 +202,7 @@ class _SingUpState extends State<SingUp> {
                         fontFamily: 'Ysabeau',
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black45,
+                        color: Colors.black87,
                       ),
                     ),
                   ),
@@ -214,7 +212,7 @@ class _SingUpState extends State<SingUp> {
                   'Country*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 15,
+                    fontSize: 17,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
@@ -222,9 +220,8 @@ class _SingUpState extends State<SingUp> {
                 const SizedBox(height: 30),
                 Container(
                   height: 42,
-                  width: 500,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
                     ),
@@ -239,7 +236,7 @@ class _SingUpState extends State<SingUp> {
                         fontFamily: 'Ysabeau',
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black45,
+                        color: Colors.black87,
                       ),
                     ),
                   ),
@@ -249,7 +246,7 @@ class _SingUpState extends State<SingUp> {
                   'State*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 15,
+                    fontSize: 17,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
@@ -257,9 +254,8 @@ class _SingUpState extends State<SingUp> {
                 const SizedBox(height: 30),
                 Container(
                   height: 42,
-                  width: 500,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
                     ),
@@ -274,7 +270,7 @@ class _SingUpState extends State<SingUp> {
                         fontFamily: 'Ysabeau',
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black45,
+                        color: Colors.black87,
                       ),
                     ),
                   ),
@@ -284,7 +280,7 @@ class _SingUpState extends State<SingUp> {
                   'City*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
-                    fontSize: 15,
+                    fontSize: 17,
                     fontWeight: FontWeight.w500,
                     color: Colors.black,
                   ),
@@ -292,9 +288,8 @@ class _SingUpState extends State<SingUp> {
                 const SizedBox(height: 30),
                 Container(
                   height: 42,
-                  width: 500,
+                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
                     ),
@@ -309,82 +304,103 @@ class _SingUpState extends State<SingUp> {
                         fontFamily: 'Ysabeau',
                         fontSize: 20,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black45,
+                        color: Colors.black87,
                       ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 30),
-                const Text(
-                  'Password*',
-                  style: TextStyle(
-                    fontFamily: 'Ysabeau',
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
                   ),
                 ),
                 const SizedBox(height: 20),
-                Container(
-                  height: 42,
-                  width: 500,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
-                    border: Border.all(
-                      color: const Color.fromARGB(12, 0, 0, 0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Column(
+                      children: [
+                        const Text(
+                          'Password*',
+                          style: TextStyle(
+                            fontFamily: 'Ysabeau',
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(height: 30),
+                        Container(
+                          height: 43,
+                          width: 525,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color.fromARGB(12, 0, 0, 0),
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const TextField(
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Type your Password',
+                              hintStyle: TextStyle(
+                                fontFamily: 'Ysabeau',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: const TextField(
-                    textAlign: TextAlign.center,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Type your Password',
-                      hintStyle: TextStyle(
-                        fontFamily: 'Ysabeau',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black45,
-                      ),
+                    const SizedBox(width: 30),
+                    Column(
+                      children: [
+                        const Text(
+                          'Confirmed Password*',
+                          style: TextStyle(
+                            fontFamily: 'Ysabeau',
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(height: 30),
+                        Container(
+                          height: 43,
+                          width: 525,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color.fromARGB(12, 0, 0, 0),
+                            ),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const TextField(
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Confirmed Password',
+                              hintStyle: TextStyle(
+                                fontFamily: 'Ysabeau',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
+                  ],
                 ),
-                const SizedBox(width: 30),
-                const Text(
-                  'Confirmed Password*',
-                  style: TextStyle(
-                    fontFamily: 'Ysabeau',
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-                const SizedBox(height: 30),
-                Container(
-                  height: 42,
-                  width: 500,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(24, 0, 0, 0),
-                    border: Border.all(
-                      color: const Color.fromARGB(12, 0, 0, 0),
-                    ),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: const TextField(
-                    textAlign: TextAlign.center,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Confirmed Password',
-                      hintStyle: TextStyle(
-                        fontFamily: 'Ysabeau',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black45,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 30),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: size.width / 4.6),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.all(10),
@@ -403,8 +419,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 20),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
                       "Don't Have Account",
@@ -433,10 +450,10 @@ class _SingUpState extends State<SingUp> {
             ),
           ),
           const SizedBox(height: 30),
-          Divider(
+          const Divider(
             color: Colors.black12,
           ),
-          Footer(),
+          const Footer(),
         ],
       ),
     );
