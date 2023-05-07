@@ -134,8 +134,10 @@ class _MenuAppBarState extends State<MenuAppBar> {
                   onSelected: (value) {
                     if (value == 'sign in') {
                       Navigator.pushNamed(context, '/signIn');
-                    } else {
+                    } else if (value == 'sign up') {
                       Navigator.pushNamed(context, '/signUp');
+                    } else {
+                      Navigator.pushNamed(context, '/admin');
                     }
                   },
                   itemBuilder: (context) {
@@ -147,6 +149,20 @@ class _MenuAppBarState extends State<MenuAppBar> {
                       const PopupMenuItem(
                         value: 'sign up',
                         child: Text('Sign Up'),
+                      ),
+                      PopupMenuItem(
+                        value: 'admin',
+                        child: Row(
+                          children: const [
+                            Icon(
+                              Icons.lock_rounded,
+                              size: 15,
+                              color: Colors.black38,
+                            ),
+                            SizedBox(width: 10),
+                            Text('Admin'),
+                          ],
+                        ),
                       ),
                     ];
                   },

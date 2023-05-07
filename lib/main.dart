@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/data/provider/provider.dart';
+import 'package:leafy/pages/admin/admin.dart';
 import 'package:leafy/pages/shop/shop.dart';
+import 'package:provider/provider.dart';
 
 import 'pages/home/home.dart';
 import 'pages/sing_in.dart';
@@ -12,19 +15,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Leafy',
-      theme: ThemeData(
-        useMaterial3: true,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => MainProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Leafy',
+        theme: ThemeData(
+          useMaterial3: true,
+        ),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const Home(),
+          '/shop': (context) => Shop(),
+          '/signIn': (context) => const SingIn(),
+          '/signUp': (context) => const SingUp(),
+          '/admin': (context) => const Admin(),
+        },
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const Home(),
-        '/shop': (context) => Shop(),
-        '/signIn': (context) => const SingIn(),
-        '/signUp': (context) => const SingUp(),
-      },
     );
   }
 }

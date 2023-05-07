@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/data/models/user.dart';
+import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/footer/footer.dart';
+import 'package:provider/provider.dart';
 
 import '../data/dictionary.dart';
 
@@ -12,8 +15,13 @@ class SingUp extends StatefulWidget {
 }
 
 class _SingUpState extends State<SingUp> {
+  List controllers = [
+    for (int i = 0; i < 7; i++) TextEditingController(),
+  ];
+
   @override
   Widget build(BuildContext context) {
+    final main = Provider.of<MainProvider>(context);
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
@@ -83,7 +91,7 @@ class _SingUpState extends State<SingUp> {
           ),
           const SizedBox(height: 50),
           Container(
-            height: 1000,
+            height: 1080,
             margin: EdgeInsets.symmetric(horizontal: size.width / 4.7),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -117,7 +125,6 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 Container(
-                  height: 42,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
@@ -126,8 +133,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: controllers[0],
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your Name',
                       hintStyle: TextStyle(
@@ -151,7 +159,6 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 Container(
-                  height: 42,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
@@ -160,8 +167,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: controllers[1],
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your Last Name',
                       hintStyle: TextStyle(
@@ -185,7 +193,6 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 Container(
-                  height: 42,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
@@ -194,8 +201,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: controllers[2],
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your mail',
                       hintStyle: TextStyle(
@@ -219,7 +227,6 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 Container(
-                  height: 42,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
@@ -228,8 +235,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: controllers[3],
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Select Country',
                       hintStyle: TextStyle(
@@ -253,7 +261,6 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 Container(
-                  height: 42,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
@@ -262,8 +269,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: controllers[4],
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your City',
                       hintStyle: TextStyle(
@@ -287,7 +295,6 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 Container(
-                  height: 42,
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
@@ -296,8 +303,9 @@ class _SingUpState extends State<SingUp> {
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: controllers[5],
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your City',
                       hintStyle: TextStyle(
@@ -329,7 +337,6 @@ class _SingUpState extends State<SingUp> {
                           ),
                           const SizedBox(height: 30),
                           Container(
-                            height: 43,
                             padding: const EdgeInsets.symmetric(horizontal: 15),
                             decoration: BoxDecoration(
                               border: Border.all(
@@ -337,9 +344,10 @@ class _SingUpState extends State<SingUp> {
                               ),
                               borderRadius: BorderRadius.circular(5),
                             ),
-                            child: const TextField(
+                            child: TextField(
+                              controller: controllers[6],
                               textAlign: TextAlign.start,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 border: InputBorder.none,
                                 hintText: 'Type your Password',
                                 hintStyle: TextStyle(
@@ -370,7 +378,6 @@ class _SingUpState extends State<SingUp> {
                           ),
                           const SizedBox(height: 30),
                           Container(
-                            height: 43,
                             padding: const EdgeInsets.symmetric(horizontal: 15),
                             decoration: BoxDecoration(
                               border: Border.all(
@@ -414,7 +421,20 @@ class _SingUpState extends State<SingUp> {
                     backgroundColor: greenColor,
                     shape: const BeveledRectangleBorder(),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    final user = User(
+                      name: controllers[0].text,
+                      lastName: controllers[1].text,
+                      email: controllers[2].text,
+                      country: controllers[3].text,
+                      state: controllers[4].text,
+                      city: controllers[5].text,
+                      password: controllers[6].text,
+                    );
+
+                    main.setUsers = user;
+                    setState(() {});
+                  },
                   child: const Text(
                     'Sing Up',
                     style: TextStyle(

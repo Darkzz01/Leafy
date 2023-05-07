@@ -119,7 +119,6 @@ class _SingInState extends State<SingIn> {
                   ),
                   const SizedBox(height: 30),
                   Container(
-                    height: 42,
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
@@ -155,7 +154,6 @@ class _SingInState extends State<SingIn> {
                   ),
                   const SizedBox(height: 30),
                   Container(
-                    height: 42,
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
