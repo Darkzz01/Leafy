@@ -95,7 +95,7 @@ class _AdminState extends State<Admin> {
                                   );
                                 }
 
-                                if (!snapshot.hasData) {
+                                if (snapshot.data.isEmpty) {
                                   return const Text('No data available');
                                 }
 
@@ -184,8 +184,7 @@ class _AdminState extends State<Admin> {
                                           SizedBox(
                                             width: 90,
                                             child: Text(
-                                              snapshot.data[0].state +
-                                                  'fffffuepwpiqbpqb;sdjvbk;djbvowbpobld;vqlbqvbqefbo',
+                                              snapshot.data[0].state,
                                               overflow: TextOverflow.ellipsis,
                                               maxLines: 2,
                                             ),
