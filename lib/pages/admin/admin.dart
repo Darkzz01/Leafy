@@ -33,7 +33,7 @@ class _AdminState extends State<Admin> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         DataTable(
-                          columnSpacing: size.width * 0.08,
+                          columnSpacing: size.width * 0.09,
                           border: TableBorder.all(),
                           columns: const [
                             DataColumn(
