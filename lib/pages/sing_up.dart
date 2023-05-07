@@ -30,7 +30,7 @@ class _SingUpState extends State<SingUp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Sing Up',
+                  'User Register',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 40,
@@ -67,7 +67,7 @@ class _SingUpState extends State<SingUp> {
                     TextButton(
                       onPressed: () {},
                       child: const Text(
-                        'Sing Up',
+                        'User Register',
                         style: TextStyle(
                           fontFamily: 'Ysabeau',
                           fontSize: 20,
@@ -96,7 +96,7 @@ class _SingUpState extends State<SingUp> {
               children: [
                 const SizedBox(height: 50),
                 const Text(
-                  'Sing Up',
+                  'Sing up',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
@@ -107,7 +107,7 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 40),
                 const Text(
-                  'name*',
+                  'Name*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 17,
@@ -119,6 +119,7 @@ class _SingUpState extends State<SingUp> {
                 Container(
                   height: 42,
                   width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
@@ -126,13 +127,12 @@ class _SingUpState extends State<SingUp> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const TextField(
-                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your Name',
                       hintStyle: TextStyle(
                         fontFamily: 'Ysabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w400,
                         color: Colors.black87,
                       ),
@@ -141,7 +141,7 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 const Text(
-                  'UserName*',
+                  'Username*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 17,
@@ -153,6 +153,7 @@ class _SingUpState extends State<SingUp> {
                 Container(
                   height: 42,
                   width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
@@ -160,13 +161,12 @@ class _SingUpState extends State<SingUp> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const TextField(
-                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your Last Name',
                       hintStyle: TextStyle(
                         fontFamily: 'Ysabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w400,
                         color: Colors.black87,
                       ),
@@ -175,7 +175,7 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 30),
                 const Text(
-                  'Address*',
+                  'Email Address*',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 17,
@@ -187,6 +187,7 @@ class _SingUpState extends State<SingUp> {
                 Container(
                   height: 42,
                   width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
@@ -194,13 +195,12 @@ class _SingUpState extends State<SingUp> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const TextField(
-                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your mail',
                       hintStyle: TextStyle(
                         fontFamily: 'Ysabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w400,
                         color: Colors.black87,
                       ),
@@ -221,6 +221,7 @@ class _SingUpState extends State<SingUp> {
                 Container(
                   height: 42,
                   width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
@@ -228,13 +229,12 @@ class _SingUpState extends State<SingUp> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const TextField(
-                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'Type your Country',
+                      hintText: 'Select Country',
                       hintStyle: TextStyle(
                         fontFamily: 'Ysabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w400,
                         color: Colors.black87,
                       ),
@@ -255,6 +255,7 @@ class _SingUpState extends State<SingUp> {
                 Container(
                   height: 42,
                   width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
@@ -262,13 +263,12 @@ class _SingUpState extends State<SingUp> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const TextField(
-                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your City',
                       hintStyle: TextStyle(
                         fontFamily: 'Ysabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w400,
                         color: Colors.black87,
                       ),
@@ -289,6 +289,7 @@ class _SingUpState extends State<SingUp> {
                 Container(
                   height: 42,
                   width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color.fromARGB(12, 0, 0, 0),
@@ -296,13 +297,12 @@ class _SingUpState extends State<SingUp> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: const TextField(
-                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Type your City',
                       hintStyle: TextStyle(
                         fontFamily: 'Ysabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w400,
                         color: Colors.black87,
                       ),
@@ -311,83 +311,89 @@ class _SingUpState extends State<SingUp> {
                 ),
                 const SizedBox(height: 20),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Column(
-                      children: [
-                        const Text(
-                          'Password*',
-                          style: TextStyle(
-                            fontFamily: 'Ysabeau',
-                            fontSize: 17,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                          ),
-                        ),
-                        const SizedBox(height: 30),
-                        Container(
-                          height: 43,
-                          width: 525,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color.fromARGB(12, 0, 0, 0),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Password*',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
                             ),
-                            borderRadius: BorderRadius.circular(5),
                           ),
-                          child: const TextField(
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Type your Password',
-                              hintStyle: TextStyle(
-                                fontFamily: 'Ysabeau',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black87,
+                          const SizedBox(height: 30),
+                          Container(
+                            height: 43,
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: const Color.fromARGB(12, 0, 0, 0),
+                              ),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: const TextField(
+                              textAlign: TextAlign.start,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Type your Password',
+                                hintStyle: TextStyle(
+                                  fontFamily: 'Ysabeau',
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black87,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     const SizedBox(width: 30),
-                    Column(
-                      children: [
-                        const Text(
-                          'Confirmed Password*',
-                          style: TextStyle(
-                            fontFamily: 'Ysabeau',
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                          ),
-                        ),
-                        const SizedBox(height: 30),
-                        Container(
-                          height: 43,
-                          width: 525,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color.fromARGB(12, 0, 0, 0),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Confirmed Password*',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
                             ),
-                            borderRadius: BorderRadius.circular(5),
                           ),
-                          child: const TextField(
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Confirmed Password',
-                              hintStyle: TextStyle(
-                                fontFamily: 'Ysabeau',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black87,
+                          const SizedBox(height: 30),
+                          Container(
+                            height: 43,
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: const Color.fromARGB(12, 0, 0, 0),
+                              ),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: const TextField(
+                              textAlign: TextAlign.start,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Confirmed Password',
+                                hintStyle: TextStyle(
+                                  fontFamily: 'Ysabeau',
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black87,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -410,10 +416,10 @@ class _SingUpState extends State<SingUp> {
                   ),
                   onPressed: () {},
                   child: const Text(
-                    'Sing in',
+                    'Sing Up',
                     style: TextStyle(
                       fontFamily: 'YSabeau',
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
                     ),
@@ -424,7 +430,7 @@ class _SingUpState extends State<SingUp> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Don't Have Account",
+                      "Don't Have Account?",
                       style: TextStyle(
                         fontFamily: 'Ysabeau',
                         fontSize: 17,

@@ -30,7 +30,7 @@ class _SingInState extends State<SingIn> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Sing In',
+                  'User Login',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 40,
@@ -67,7 +67,7 @@ class _SingInState extends State<SingIn> {
                     TextButton(
                       onPressed: () {},
                       child: const Text(
-                        'Sing In',
+                        'User Login',
                         style: TextStyle(
                           fontFamily: 'Ysabeau',
                           fontSize: 20,
@@ -121,21 +121,22 @@ class _SingInState extends State<SingIn> {
                   Container(
                     height: 42,
                     width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(3, 161, 160, 160),
+                      color: const Color.fromARGB(3, 161, 160, 160),
                       border: Border.all(
                         color: const Color.fromARGB(12, 0, 0, 0),
                       ),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: const TextField(
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'Type your Name',
+                        hintText: 'Type your username',
                         hintStyle: TextStyle(
                           fontFamily: 'Ysabeau',
-                          fontSize: 20,
+                          fontSize: 17,
                           fontWeight: FontWeight.w400,
                           color: Colors.black54,
                         ),
@@ -156,21 +157,22 @@ class _SingInState extends State<SingIn> {
                   Container(
                     height: 42,
                     width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(8, 194, 194, 194),
+                      color: const Color.fromARGB(8, 194, 194, 194),
                       border: Border.all(
                         color: const Color.fromARGB(19, 0, 0, 0),
                       ),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: const TextField(
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Password',
                         hintStyle: TextStyle(
                           fontFamily: 'Ysabeau',
-                          fontSize: 20,
+                          fontSize: 17,
                           fontWeight: FontWeight.w400,
                           color: Colors.black54,
                         ),
@@ -179,8 +181,11 @@ class _SingInState extends State<SingIn> {
                   ),
                   const SizedBox(height: 30),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      Checkbox(
+                        value: false,
+                        onChanged: (value) {},
+                      ),
                       const Text(
                         'Remember me',
                         style: TextStyle(
@@ -190,11 +195,11 @@ class _SingInState extends State<SingIn> {
                           color: Color.fromARGB(183, 0, 0, 0),
                         ),
                       ),
-                      const SizedBox(width: 20),
+                      Spacer(),
                       TextButton(
                         onPressed: () {},
                         child: const Text(
-                          'Forgot Password',
+                          'Forgot Password?',
                           style: TextStyle(
                             fontFamily: 'Ysabeau',
                             fontSize: 17,
@@ -217,7 +222,7 @@ class _SingInState extends State<SingIn> {
                       'Sing in',
                       style: TextStyle(
                         fontFamily: 'YSabeau',
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
@@ -227,7 +232,7 @@ class _SingInState extends State<SingIn> {
                   Row(
                     children: [
                       const Text(
-                        "Don't Have Account",
+                        "Don't Have An Account",
                         style: TextStyle(
                           fontFamily: 'Ysabeau',
                           fontSize: 17,
@@ -238,7 +243,7 @@ class _SingInState extends State<SingIn> {
                       TextButton(
                         onPressed: () {},
                         child: const Text(
-                          'Sing in',
+                          'Sing up',
                           style: TextStyle(
                             fontFamily: 'Ysabeau',
                             fontSize: 17,
