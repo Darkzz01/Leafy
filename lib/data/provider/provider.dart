@@ -10,4 +10,14 @@ class MainProvider extends ChangeNotifier {
     users.add(user);
     notifyListeners();
   }
+
+  Future getData() async {
+    List list = [];
+
+    await Future.delayed(const Duration(seconds: 2), () {
+      list = users;
+    });
+
+    return list;
+  }
 }
