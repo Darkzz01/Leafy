@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
+import 'package:leafy/data/models/user.dart';
+import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/footer/footer.dart';
-
+import 'package:provider/provider.dart';
 import '../widgets/appBar/app_bar.dart';
 
 class SingIn extends StatefulWidget {
@@ -12,8 +14,12 @@ class SingIn extends StatefulWidget {
 }
 
 class _SingInState extends State<SingIn> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
+    final main = Provider.of<MainProvider>(context);
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
@@ -128,9 +134,10 @@ class _SingInState extends State<SingIn> {
                       ),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const TextField(
+                    child: TextField(
+                      controller: emailController,
                       textAlign: TextAlign.start,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Type your username',
                         hintStyle: TextStyle(
@@ -163,9 +170,10 @@ class _SingInState extends State<SingIn> {
                       ),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const TextField(
+                    child: TextField(
+                      controller: passwordController,
                       textAlign: TextAlign.start,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Password',
                         hintStyle: TextStyle(
@@ -215,7 +223,14 @@ class _SingInState extends State<SingIn> {
                       backgroundColor: greenColor,
                       shape: const BeveledRectangleBorder(),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      for (var element in main.getUsers) {
+                        if (element.email == emailController.text &&
+                            element.password == passwordController.text) {
+                          Navigator.pushReplacementNamed(context, '/');
+                        }
+                      }
+                    },
                     child: const Text(
                       'Sing in',
                       style: TextStyle(
