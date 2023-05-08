@@ -11,13 +11,8 @@ class MainProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future getData() async {
-    List list = [];
-
-    await Future.delayed(const Duration(seconds: 2), () {
-      list = users;
-    });
-
-    return list;
+  Future delete(User user) async {
+    users.remove(user);
+    notifyListeners();
   }
 }
