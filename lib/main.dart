@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/pages/admin/admin.dart';
+import 'package:leafy/pages/admin/new_product.dart';
 import 'package:leafy/pages/shop/shop.dart';
 import 'package:provider/provider.dart';
 
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
           '/signIn': (context) => const SingIn(),
           '/signUp': (context) => const SingUp(),
           '/admin': (context) => const Admin(),
+          '/newProduct': (context) => Addproduct(),
         },
       ),
     );

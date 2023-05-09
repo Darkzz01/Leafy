@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
+import 'package:leafy/data/models/product.dart';
 import 'package:leafy/data/models/user.dart';
 import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
@@ -28,21 +29,85 @@ class _AdminState extends State<Admin> {
               child: Row(
                 children: [
                   Container(
-                    width: 250,
-                  ),
-                  const RotatedBox(
-                    quarterTurns: 1,
-                    child: Divider(),
-                  ),
-                  Expanded(
-                    child: ListView(
+                    width: size.width * 0.2,
+                    child: Column(
                       children: [
-                        DataTable(
-                          columns: generateColumn(),
-                          rows: generateUser(main.getUsers, main),
+                        const SizedBox(height: 10),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(350, 40),
+                            shape: const BeveledRectangleBorder(),
+                            backgroundColor: greenColor,
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/signUp');
+                          },
+                          child: const Text(
+                            'New User',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(350, 40),
+                            shape: const BeveledRectangleBorder(),
+                            backgroundColor: greenColor,
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/newProduct');
+                          },
+                          child: const Text(
+                            'New Product',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ],
                     ),
+                  ),
+                  const RotatedBox(
+                    quarterTurns: 1,
+                    child: Divider(height: 0),
+                  ),
+                  Column(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          width: size.width * 0.8,
+                          child: ListView(
+                            children: [
+                              DataTable(
+                                columns: generateColumn(),
+                                rows: generateUser(main.getUsers, main),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          width: size.width * 0.8,
+                          child: ListView(
+                            children: [
+                              DataTable(
+                                columns: generateColumn0(),
+                                rows: generateproduct(main.getProducts, main),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -93,7 +158,7 @@ class _AdminState extends State<Admin> {
           DataCell(
             TextButton(
               onPressed: () {
-                main.delete(element);
+                main.deleteUser(element);
               },
               child: const Text(
                 'Delete',
@@ -159,6 +224,104 @@ class _AdminState extends State<Admin> {
         style: columnStyle,
       )),
     ];
+    return aux;
+  }
+
+  List<DataColumn> generateColumn0() {
+    TextStyle columnStyle = const TextStyle(
+      fontFamily: 'Ysabeau',
+      fontSize: 17,
+      fontWeight: FontWeight.w600,
+      color: Colors.black,
+    );
+
+    List<DataColumn> aux = [
+      DataColumn(
+          label: Text(
+        'Image',
+        style: columnStyle,
+      )),
+      DataColumn(
+          label: Text(
+        'Name of product',
+        style: columnStyle,
+      )),
+      DataColumn(
+          label: Text(
+        'Price',
+        style: columnStyle,
+      )),
+      DataColumn(
+          label: Text(
+        'OldPrice',
+        style: columnStyle,
+      )),
+      DataColumn(
+          label: Text(
+        'Description',
+        style: columnStyle,
+      )),
+      DataColumn(
+          label: Text(
+        'Delete',
+        style: columnStyle,
+      )),
+    ];
+    return aux;
+  }
+
+  List<DataRow> generateproduct(List<Product> products, MainProvider main) {
+    List<DataRow> aux = [];
+
+    products.forEach((element) {
+      TextStyle cellStyle = const TextStyle(
+        fontFamily: 'Ysabeau',
+        fontSize: 17,
+        fontWeight: FontWeight.w500,
+        color: Colors.black87,
+      );
+
+      DataRow row = DataRow(cells: [
+        DataCell(Text(
+          element.image,
+          style: cellStyle,
+        )),
+        DataCell(Text(
+          element.name,
+          style: cellStyle,
+        )),
+        DataCell(Text(
+          element.price,
+          style: cellStyle,
+        )),
+        DataCell(Text(
+          element.oldPrice,
+          style: cellStyle,
+        )),
+        DataCell(Text(
+          element.descripcion,
+          style: cellStyle,
+        )),
+        DataCell(
+          TextButton(
+            onPressed: () {
+              main.deleteProduct(element);
+            },
+            child: const Text(
+              'Delete',
+              style: TextStyle(
+                fontFamily: 'Ysabeau',
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: Color.fromARGB(255, 163, 9, 9),
+              ),
+            ),
+          ),
+        ),
+      ]);
+      aux.add(row);
+    });
+
     return aux;
   }
 }
