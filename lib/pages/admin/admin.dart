@@ -30,6 +30,7 @@ class _AdminState extends State<Admin> {
                 children: [
                   Container(
                     width: size.width * 0.2,
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Column(
                       children: [
                         const SizedBox(height: 10),

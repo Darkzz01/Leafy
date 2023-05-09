@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/body/body_product.dart';
+import 'package:provider/provider.dart';
 
 import 'menu_body_product_full.dart';
 
@@ -17,6 +19,7 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
+    final main = Provider.of<MainProvider>(context);
     return Expanded(
       flex: 2,
       child: Container(
@@ -141,37 +144,15 @@ class _BodyState extends State<Body> {
               child: showListView
                   ? ListView(
                       physics: const NeverScrollableScrollPhysics(),
-                      children: const [
-                        MenuBodyProductFull(
-                          image: 'assets/listview_5.png',
-                          title: 'Glass Top Coffee Table',
-                          price: 7500,
-                          oldPrice: 8000,
-                        ),
-                        MenuBodyProductFull(
-                          image: 'assets/listview_6.png',
-                          title: 'Angle Double Bed',
-                          price: 7500,
-                          oldPrice: 8000,
-                        ),
-                        MenuBodyProductFull(
-                          image: 'assets/listview_4.png',
-                          title: 'Odrex Double Bed',
-                          price: 7500,
-                          oldPrice: 8000,
-                        ),
-                        MenuBodyProductFull(
-                          image: 'assets/listview_6.png',
-                          title: 'Phonex Double Bed',
-                          price: 7500,
-                          oldPrice: 8000,
-                        ),
-                        MenuBodyProductFull(
-                          image: 'assets/listview_8.png',
-                          title: 'Obhai almirah',
-                          price: 7500,
-                          oldPrice: 8000,
-                        ),
+                      children: [
+                        for (int i = 0; i < main.getProducts.length; i++)
+                          MenuBodyProductFull(
+                            title: main.getProducts[i].name,
+                            image: main.getProducts[i].image,
+                            price: double.parse(main.getProducts[i].price),
+                            oldPrice:
+                                double.parse(main.getProducts[i].oldPrice),
+                          ),
                       ],
                     )
                   : GridView.count(
@@ -181,12 +162,13 @@ class _BodyState extends State<Body> {
                       mainAxisSpacing: 20,
                       childAspectRatio: 1 / 1.55,
                       children: [
-                        for (int i = 0; i < 9; i++)
-                          const MenuBodyProduct(
-                            title: 'Title',
-                            image: 'assets/product_0.png',
-                            price: 1000,
-                            oldPrice: 2500,
+                        for (int i = 0; i < main.getProducts.length; i++)
+                          MenuBodyProduct(
+                            title: main.getProducts[i].name,
+                            image: main.getProducts[i].image,
+                            price: double.parse(main.getProducts[i].price),
+                            oldPrice:
+                                double.parse(main.getProducts[i].oldPrice),
                             banner: true,
                             showButton: false,
                             isExpanded: false,

@@ -6,14 +6,14 @@ import 'package:provider/provider.dart';
 import '../../data/dictionary.dart';
 import '../../widgets/footer/footer.dart';
 
-class Addproduct extends StatefulWidget {
-  Addproduct({Key? key}) : super(key: key);
+class AddProduct extends StatefulWidget {
+  AddProduct({Key? key}) : super(key: key);
 
   @override
-  State<Addproduct> createState() => _AddproductState();
+  State<AddProduct> createState() => _AddProductState();
 }
 
-class _AddproductState extends State<Addproduct> {
+class _AddProductState extends State<AddProduct> {
   TextEditingController imageController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController priceController = TextEditingController();
@@ -297,7 +297,7 @@ class _AddproductState extends State<Addproduct> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.all(10),
-                    fixedSize: const Size(100, 40),
+                    fixedSize: const Size(150, 40),
                     backgroundColor: greenColor,
                     shape: const BeveledRectangleBorder(),
                   ),
@@ -314,7 +314,7 @@ class _AddproductState extends State<Addproduct> {
                     setState(() {});
                   },
                   child: const Text(
-                    'Sing Up',
+                    'Add Product',
                     style: TextStyle(
                       fontFamily: 'YSabeau',
                       fontSize: 17,

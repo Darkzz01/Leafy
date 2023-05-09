@@ -18,62 +18,58 @@ class _MenuAppBarState extends State<MenuAppBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100,
       child: Row(
         children: [
           // Logo and Title - - - - - - - - - - - - - - - - - - - - - //
           Expanded(
             flex: 1,
-            child: Container(
-              child: Row(
-                children: [
-                  const SizedBox(width: 60),
-                  Icon(
-                    Icons.local_florist_rounded,
-                    size: 60,
-                    color: greenColor,
+            child: Row(
+              children: [
+                const SizedBox(width: 60),
+                Icon(
+                  Icons.local_florist_rounded,
+                  size: 60,
+                  color: greenColor,
+                ),
+                const SizedBox(width: 10),
+                const Text(
+                  'Leafy',
+                  style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black,
                   ),
-                  const SizedBox(width: 10),
-                  const Text(
-                    'Leafy',
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
           // Menu - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Expanded(
             flex: 2,
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  MenuAppBarOption(
-                    title: 'Home',
-                  ),
-                  MenuAppBarOption(
-                    title: 'About Us',
-                  ),
-                  MenuAppBarOption(
-                    title: 'Shop',
-                  ),
-                  MenuAppBarOption(
-                    title: 'Blog',
-                  ),
-                  MenuAppBarOption(
-                    title: 'Contact',
-                  ),
-                  MenuAppBarOption(
-                    title: 'Order Track',
-                  ),
-                ],
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                MenuAppBarOption(
+                  title: 'Home',
+                ),
+                MenuAppBarOption(
+                  title: 'About Us',
+                ),
+                MenuAppBarOption(
+                  title: 'Shop',
+                ),
+                MenuAppBarOption(
+                  title: 'Blog',
+                ),
+                MenuAppBarOption(
+                  title: 'Contact',
+                ),
+                MenuAppBarOption(
+                  title: 'Order Track',
+                ),
+              ],
             ),
           ),
           // Actions - - - - - - - - - - - - - - - - - - - - - - - - //

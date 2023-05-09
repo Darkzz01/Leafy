@@ -58,14 +58,11 @@ class _MenuBodyProductState extends State<MenuBodyProduct> {
             child: Stack(
               children: [
                 Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Image.asset(
-                      widget.image,
-                      height: double.infinity,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
+                  child: Image.asset(
+                    widget.image,
+                    height: double.infinity,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 widget.banner

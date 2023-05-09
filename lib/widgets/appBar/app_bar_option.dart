@@ -17,7 +17,7 @@ class _MenuAppBarOptionState extends State<MenuAppBarOption> {
       ),
       onPressed: () {
         if (widget.title == 'Home') {
-          Navigator.pop(context);
+          Navigator.pushReplacementNamed(context, '/');
         }
         if (widget.title == 'Shop') {
           Navigator.pushNamed(context, '/shop');

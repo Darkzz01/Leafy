@@ -419,7 +419,7 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 60),
           // Row 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 30),
