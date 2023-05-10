@@ -30,8 +30,8 @@ class _BodyState extends State<Body> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const Text(
-                  'Showing 1-12 of 29 results',
+                Text(
+                  'Showing 9-${main.getProducts.length} of ${main.getProducts.length} results',
                   style: TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 18,
@@ -141,40 +141,64 @@ class _BodyState extends State<Body> {
             ),
             const SizedBox(height: 50),
             Expanded(
-              child: showListView
-                  ? ListView(
-                      physics: const NeverScrollableScrollPhysics(),
+              child: main.getProducts.isEmpty
+                  ? Column(
                       children: [
-                        for (int i = 0; i < main.getProducts.length; i++)
-                          MenuBodyProductFull(
-                            title: main.getProducts[i].name,
-                            image: main.getProducts[i].image,
-                            price: double.parse(main.getProducts[i].price),
-                            oldPrice:
-                                double.parse(main.getProducts[i].oldPrice),
+                        const SizedBox(height: 200),
+                        Icon(
+                          Icons.window_rounded,
+                          color: Colors.black.withOpacity(0.05),
+                          size: 100,
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          'No Products Available',
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.black.withOpacity(0.07),
+                            fontWeight: FontWeight.bold,
                           ),
+                        ),
                       ],
                     )
-                  : GridView.count(
-                      physics: const NeverScrollableScrollPhysics(),
-                      crossAxisCount: 3,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
-                      childAspectRatio: 1 / 1.55,
-                      children: [
-                        for (int i = 0; i < main.getProducts.length; i++)
-                          MenuBodyProduct(
-                            title: main.getProducts[i].name,
-                            image: main.getProducts[i].image,
-                            price: double.parse(main.getProducts[i].price),
-                            oldPrice:
-                                double.parse(main.getProducts[i].oldPrice),
-                            banner: true,
-                            showButton: false,
-                            isExpanded: false,
-                          ),
-                      ],
-                    ),
+                  : showListView
+                      ? ListView(
+                          physics: const NeverScrollableScrollPhysics(),
+                          children: [
+                            for (int i = 0;
+                                i < main.getProducts.length && i < 5;
+                                i++)
+                              MenuBodyProductFull(
+                                title: main.getProducts[i].name,
+                                image: main.getProducts[i].image,
+                                price: double.parse(main.getProducts[i].price),
+                                oldPrice:
+                                    double.parse(main.getProducts[i].oldPrice),
+                              ),
+                          ],
+                        )
+                      : GridView.count(
+                          physics: const NeverScrollableScrollPhysics(),
+                          crossAxisCount: 3,
+                          crossAxisSpacing: 20,
+                          mainAxisSpacing: 20,
+                          childAspectRatio: 1 / 1.55,
+                          children: [
+                            for (int i = 0;
+                                i < main.getProducts.length && i < 9;
+                                i++)
+                              MenuBodyProduct(
+                                title: main.getProducts[i].name,
+                                image: main.getProducts[i].image,
+                                price: double.parse(main.getProducts[i].price),
+                                oldPrice:
+                                    double.parse(main.getProducts[i].oldPrice),
+                                banner: true,
+                                showButton: false,
+                                isExpanded: false,
+                              ),
+                          ],
+                        ),
             ),
           ],
         ),

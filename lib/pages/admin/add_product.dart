@@ -311,6 +311,13 @@ class _AddProductState extends State<AddProduct> {
                     );
 
                     main.setProducts = product;
+
+                    imageController.clear();
+                    nameController.clear();
+                    priceController.clear();
+                    oldPriceController.clear();
+                    descriptionController.clear();
+
                     setState(() {});
                   },
                   child: const Text(

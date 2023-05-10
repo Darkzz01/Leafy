@@ -83,7 +83,7 @@ class _AdminState extends State<Admin> {
                   Column(
                     children: [
                       Expanded(
-                        child: Container(
+                        child: SizedBox(
                           width: size.width * 0.8,
                           child: ListView(
                             children: [
@@ -95,8 +95,12 @@ class _AdminState extends State<Admin> {
                           ),
                         ),
                       ),
+                      SizedBox(
+                        width: size.width * 0.8,
+                        child: const Divider(),
+                      ),
                       Expanded(
-                        child: Container(
+                        child: SizedBox(
                           width: size.width * 0.8,
                           child: ListView(
                             children: [
