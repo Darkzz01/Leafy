@@ -19,7 +19,6 @@ class _AddProductState extends State<AddProduct> {
   TextEditingController priceController = TextEditingController();
   TextEditingController oldPriceController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
