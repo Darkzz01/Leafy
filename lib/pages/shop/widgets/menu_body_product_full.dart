@@ -48,28 +48,26 @@ class MenuBodyProductFull extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  true
-                      ? Positioned(
-                          top: 0,
-                          right: 0,
-                          child: Container(
-                            height: 25,
-                            width: 80,
-                            decoration: const BoxDecoration(
-                              color: Color.fromRGBO(89, 178, 126, 1),
-                            ),
-                            child: const Text(
-                              '100 Sales',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'Ysabeau',
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        )
-                      : Container(),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Container(
+                      height: 25,
+                      width: 80,
+                      decoration: const BoxDecoration(
+                        color: Color.fromRGBO(89, 178, 126, 1),
+                      ),
+                      child: const Text(
+                        '100 Sales',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Ysabeau',
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

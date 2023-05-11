@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/body/option_button_item.dart';
 import 'package:leafy/widgets/footer/footer.dart';

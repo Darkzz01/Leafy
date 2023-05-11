@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
-import 'package:leafy/data/models/user.dart';
 import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/footer/footer.dart';
 import 'package:provider/provider.dart';

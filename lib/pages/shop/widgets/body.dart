@@ -32,7 +32,7 @@ class _BodyState extends State<Body> {
               children: [
                 Text(
                   'Showing 9-${main.getProducts.length} of ${main.getProducts.length} results',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Ysabeau',
                     fontSize: 18,
                     fontWeight: FontWeight.w500,

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class MenuAppBarAction extends StatefulWidget {
   MenuAppBarAction({super.key, required this.quarter, required this.icon});
-  int quarter;
-  IconData icon;
+  final int quarter;
+  final IconData icon;
 
   @override
   State<MenuAppBarAction> createState() => _MenuAppBarActionState();
