@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:leafy/data/dictionary.dart';
+import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/footer/footer.dart';
+import 'package:provider/provider.dart';
 
 import '../../widgets/body/body_text_button.dart';
 import '../../widgets/body/body_comments.dart';
@@ -21,6 +23,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    final main = Provider.of<MainProvider>(context);
     // final size = MediaQuery.of()
     return Scaffold(
       body: ListView(
@@ -240,102 +243,87 @@ class _HomeState extends State<Home> {
             ),
           ),
           // Products - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-          const SizedBox(height: 30),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                MenuBodyProduct(
-                  banner: true,
-                  title: 'Small Dinning Table',
-                  image: 'assets/product_0.png',
-                  price: 200.00,
-                  oldPrice: 500.00,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: true,
-                  title: 'Doug Wooden Table',
-                  image: 'assets/product_1.png',
-                  price: 100.00,
-                  oldPrice: 300.00,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: true,
-                  title: 'Bamboo Forniture',
-                  image: 'assets/product_3.png',
-                  price: 350.00,
-                  oldPrice: 700.00,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: true,
-                  title: 'Stylish Hall Room Chair',
-                  image: 'assets/product_2.png',
-                  price: 400.00,
-                  oldPrice: 850.00,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 100),
-          // ListView - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-          Container(
-            height: 400,
-            padding: const EdgeInsets.symmetric(horizontal: 70),
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    listViewItem(
-                      'assets/listview_0.png',
-                      'Wooden Furnitue',
-                      '20 Items',
+          const SizedBox(height: 110),
+          main.getProducts.isEmpty
+              ? Column(
+                  children: const [
+                    Icon(
+                      Icons.window_rounded,
+                      size: 100,
+                      color: Color.fromARGB(19, 0, 0, 0),
                     ),
-                    listViewItem(
-                      'assets/product_3.png',
-                      'Bamboo Furniture',
-                      '2 Items',
-                    ),
-                    listViewItem(
-                      'assets/listview_1.png',
-                      'Metal Furnitutre',
-                      '2 Items',
-                    ),
-                    listViewItem(
-                      'assets/listview_2.png',
-                      'Plastic Furniture',
-                      '1 Items',
-                    ),
-                    listViewItem(
-                      'assets/listview_3.png',
-                      'Glass Furniture',
-                      '7 Items',
-                    ),
-                    listViewItem(
-                      'assets/listview_4.png',
-                      'Concrete Furniture',
-                      '0 Items',
-                    ),
-                    listViewItem(
-                      'assets/listview_5.png',
-                      'Bombay Furnitute',
-                      '0 Items',
+                    SizedBox(width: 10),
+                    Text(
+                      "No product Available",
+                      style: TextStyle(
+                        fontFamily: 'Ysabeau',
+                        fontSize: 35,
+                        color: Colors.black12,
+                      ),
                     ),
                   ],
+                )
+              : Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      for (int i = 0; i < main.getProducts.length && i < 4; i++)
+                        MenuBodyProduct(
+                          banner: true,
+                          title: main.getProducts[i].name,
+                          image: main.getProducts[i].image,
+                          price: double.parse(main.getProducts[i].price),
+                          oldPrice: double.parse(main.getProducts[i].oldPrice),
+                          showButton: true,
+                          isExpanded: true,
+                        ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
-          ),
+          const SizedBox(height: 120),
+          main.getProducts.isEmpty
+              ? Column(
+                  children: const [
+                    Icon(
+                      Icons.window_rounded,
+                      size: 100,
+                      color: Color.fromARGB(19, 0, 0, 0),
+                    ),
+                    Text(
+                      "No product Available",
+                      style: TextStyle(
+                        fontFamily: 'Ysabeau',
+                        fontSize: 35,
+                        color: Colors.black12,
+                      ),
+                    ),
+                  ],
+                )
+              :
+              // ListView - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+              Container(
+                  height: 400,
+                  padding: const EdgeInsets.symmetric(horizontal: 70),
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          for (int i = 0;
+                              i < main.getProducts.length && i < 7;
+                              i++)
+                            listViewItem(
+                              main.getProducts[i].image,
+                              main.getProducts[i].name,
+                              main.getProducts[i].descripcion,
+                            ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
           const SizedBox(height: 100),
           // Title - Division - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           const Text(
@@ -374,97 +362,71 @@ class _HomeState extends State<Home> {
             ],
           ),
           const SizedBox(height: 50),
-          // Row 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_4.png',
-                  title: 'Odrex Double Bed',
-                  price: 7500.0,
-                  oldPrice: 8000.0,
-                  showButton: true,
-                  isExpanded: true,
+          main.getProducts.isEmpty
+              ? Column(
+                  children: const [
+                    Text(''),
+                  ],
+                )
+              :
+              // Row 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+              Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      for (int i = 0; i < main.getProducts.length && i < 4; i++)
+                        MenuBodyProduct(
+                          banner: false,
+                          image: main.getProducts[i].image,
+                          title: main.getProducts[i].name,
+                          price: double.parse(main.getProducts[i].price),
+                          oldPrice: double.parse(main.getProducts[i].oldPrice),
+                          showButton: true,
+                          isExpanded: true,
+                        ),
+                    ],
+                  ),
                 ),
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_6.png',
-                  title: 'Angle Double Bed',
-                  price: 7500.0,
-                  oldPrice: 8000.0,
-                  showButton: true,
-                  isExpanded: true,
+          const SizedBox(height: 90),
+          main.getProducts.isEmpty
+              ? Column(
+                  children: const [
+                    Icon(
+                      Icons.window_rounded,
+                      size: 100,
+                      color: Color.fromARGB(15, 0, 0, 0),
+                    ),
+                    Text(
+                      "No product Available",
+                      style: TextStyle(
+                        fontFamily: 'Ysabeau',
+                        fontSize: 35,
+                        color: Colors.black12,
+                      ),
+                    ),
+                  ],
+                )
+              :
+              // Row 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+              Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      for (int i = 0; i < main.getProducts.length && i < 4; i++)
+                        MenuBodyProduct(
+                          banner: false,
+                          image: main.getProducts[i].image,
+                          title: main.getProducts[i].name,
+                          price: double.parse(main.getProducts[i].price),
+                          oldPrice: double.parse(main.getProducts[i].oldPrice),
+                          showButton: true,
+                          isExpanded: true,
+                        ),
+                    ],
+                  ),
                 ),
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_7.png',
-                  title: 'Phonex Double Bed',
-                  price: 7500.0,
-                  oldPrice: 8000.0,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_2.png',
-                  title: 'Care Wood Stool',
-                  price: 7500.0,
-                  oldPrice: 8000.0,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 60),
-          // Row 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_8.png',
-                  title: 'Obhai Almirah',
-                  price: 700.0,
-                  oldPrice: 800.0,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_9.png',
-                  title: 'Bamboo Table',
-                  price: 750.0,
-                  oldPrice: 800.0,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_10.png',
-                  title: 'Red Wood Almirah',
-                  price: 7500.0,
-                  oldPrice: 8000.0,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-                MenuBodyProduct(
-                  banner: false,
-                  image: 'assets/listview_11.png',
-                  title: 'Raymond Wood Bed',
-                  price: 7500.0,
-                  oldPrice: 8000.0,
-                  showButton: true,
-                  isExpanded: true,
-                ),
-              ],
-            ),
-          ),
           const SizedBox(height: 100),
           // Main container - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           Container(
