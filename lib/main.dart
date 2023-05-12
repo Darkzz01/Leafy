@@ -3,6 +3,7 @@ import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/pages/admin/admin.dart';
 import 'package:leafy/pages/admin/add_product.dart';
 import 'package:leafy/pages/shop/shop.dart';
+import 'package:leafy/pages/sql/sql.dart';
 import 'package:provider/provider.dart';
 
 import 'pages/home/home.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           '/signUp': (context) => const SingUp(),
           '/admin': (context) => const Admin(),
           '/newProduct': (context) => AddProduct(),
+          '/sql': (context) => const SQL(),
         },
       ),
     );

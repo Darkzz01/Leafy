@@ -73,6 +73,26 @@ class _AdminState extends State<Admin> {
                             ),
                           ),
                         ),
+                        const SizedBox(height: 20),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(350, 40),
+                            shape: const BeveledRectangleBorder(),
+                            backgroundColor: greenColor,
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/sql');
+                          },
+                          child: const Text(
+                            'SQL',
+                            style: TextStyle(
+                              fontFamily: 'Ysabeau',
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
