@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
-import 'package:leafy/data/models/product_model.dart';
 import 'package:leafy/main.dart';
 
 class SQL extends StatefulWidget {

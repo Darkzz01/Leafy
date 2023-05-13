@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leafy/data/models/product.dart';
-import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
-import 'package:provider/provider.dart';
 import '../../data/dictionary.dart';
 import '../../data/models/product_model.dart';
 import '../../main.dart';
@@ -24,7 +21,6 @@ class _AddProductState extends State<AddProduct> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final main = Provider.of<MainProvider>(context);
 
     return Scaffold(
       body: ListView(
