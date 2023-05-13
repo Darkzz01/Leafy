@@ -245,8 +245,8 @@ class _HomeState extends State<Home> {
           // Products - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           const SizedBox(height: 110),
           main.getProducts.isEmpty
-              ? Column(
-                  children: const [
+              ? const Column(
+                  children: [
                     Icon(
                       Icons.window_rounded,
                       size: 100,
@@ -283,8 +283,8 @@ class _HomeState extends State<Home> {
                 ),
           const SizedBox(height: 120),
           main.getProducts.isEmpty
-              ? Column(
-                  children: const [
+              ? const Column(
+                  children: [
                     Icon(
                       Icons.window_rounded,
                       size: 100,
@@ -363,8 +363,8 @@ class _HomeState extends State<Home> {
           ),
           const SizedBox(height: 50),
           main.getProducts.isEmpty
-              ? Column(
-                  children: const [
+              ? const Column(
+                  children: [
                     Text(''),
                   ],
                 )
@@ -390,8 +390,8 @@ class _HomeState extends State<Home> {
                 ),
           const SizedBox(height: 90),
           main.getProducts.isEmpty
-              ? Column(
-                  children: const [
+              ? const Column(
+                  children: [
                     Icon(
                       Icons.window_rounded,
                       size: 100,
