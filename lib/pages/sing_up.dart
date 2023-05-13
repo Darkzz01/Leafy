@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:leafy/data/models/product_model.dart';
 import 'package:leafy/data/models/user.dart';
 import 'package:leafy/data/provider/provider.dart';
-import 'package:leafy/main.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/footer/footer.dart';
 import 'package:provider/provider.dart';
