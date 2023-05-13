@@ -44,7 +44,7 @@ class _SQLState extends State<SQL> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "${mainBox.values.toList()[3].name}",
+                        "${productBox.values}",
                         style: const TextStyle(
                           fontSize: 30,
                           color: Colors.white,
@@ -75,11 +75,6 @@ class _SQLState extends State<SQL> {
                             ),
                           ),
                           onPressed: () {
-                            mainBox.put('1', 'Juan');
-                            mainBox.put('2', 'Maria');
-                            mainBox.put('3', 'Pedro');
-                            mainBox.put('Prduct 1',
-                                ProductModel(name: 'Plant', lastName: 'l'));
                             setState(() {});
                           },
                         ),

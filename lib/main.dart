@@ -14,11 +14,13 @@ import 'pages/sing_in.dart';
 import 'pages/sing_up.dart';
 
 late Box mainBox;
+late Box productBox;
 
 Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(ProductModelAdapter());
   mainBox = await Hive.openBox('Main');
+  productBox = await Hive.openBox('Product');
   runApp(const MyApp());
 }
 

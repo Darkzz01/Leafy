@@ -4,6 +4,8 @@ import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:provider/provider.dart';
 import '../../data/dictionary.dart';
+import '../../data/models/product_model.dart';
+import '../../main.dart';
 import '../../widgets/footer/footer.dart';
 
 class AddProduct extends StatefulWidget {
@@ -301,16 +303,23 @@ class _AddProductState extends State<AddProduct> {
                     shape: const BeveledRectangleBorder(),
                   ),
                   onPressed: () {
-                    final product = Product(
-                      image: imageController.text,
-                      name: nameController.text,
-                      price: priceController.text,
-                      oldPrice: oldPriceController.text,
-                      descripcion: descriptionController.text,
+                    // final product = Product(
+                    //   image: imageController.text,
+                    //   name: nameController.text,
+                    //   price: priceController.text,
+                    //   oldPrice: oldPriceController.text,
+                    //   descripcion: descriptionController.text,
+                    // );
+                    // main.setProducts = product;
+                    productBox.add(
+                      ProductModel(
+                        image: imageController.text,
+                        name: nameController.text,
+                        price: priceController.text,
+                        oldPrice: oldPriceController.text,
+                        description: descriptionController.text,
+                      ),
                     );
-
-                    main.setProducts = product;
-
                     imageController.clear();
                     nameController.clear();
                     priceController.clear();

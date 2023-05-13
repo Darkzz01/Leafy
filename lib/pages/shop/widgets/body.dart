@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/provider/provider.dart';
+import 'package:leafy/main.dart';
 import 'package:leafy/widgets/body/body_product.dart';
 import 'package:provider/provider.dart';
 
@@ -95,9 +96,9 @@ class _BodyState extends State<Body> {
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(color: Colors.black54),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Text(
                           'Sort By Date',
                           style: TextStyle(
@@ -141,7 +142,7 @@ class _BodyState extends State<Body> {
             ),
             const SizedBox(height: 50),
             Expanded(
-              child: main.getProducts.isEmpty
+              child: productBox.values.toList().isEmpty
                   ? Column(
                       children: [
                         const SizedBox(height: 200),
@@ -166,14 +167,15 @@ class _BodyState extends State<Body> {
                           physics: const NeverScrollableScrollPhysics(),
                           children: [
                             for (int i = 0;
-                                i < main.getProducts.length && i < 5;
+                                i < productBox.values.toList().length && i < 5;
                                 i++)
                               MenuBodyProductFull(
-                                title: main.getProducts[i].name,
-                                image: main.getProducts[i].image,
-                                price: double.parse(main.getProducts[i].price),
-                                oldPrice:
-                                    double.parse(main.getProducts[i].oldPrice),
+                                title: productBox.values.toList()[i].name,
+                                image: productBox.values.toList()[i].image,
+                                price: double.parse(
+                                    productBox.values.toList()[i].price),
+                                oldPrice: double.parse(
+                                    productBox.values.toList()[i].oldPrice),
                               ),
                           ],
                         )
@@ -185,14 +187,15 @@ class _BodyState extends State<Body> {
                           childAspectRatio: 1 / 1.55,
                           children: [
                             for (int i = 0;
-                                i < main.getProducts.length && i < 9;
+                                i < productBox.values.toList().length && i < 9;
                                 i++)
                               MenuBodyProduct(
-                                title: main.getProducts[i].name,
-                                image: main.getProducts[i].image,
-                                price: double.parse(main.getProducts[i].price),
-                                oldPrice:
-                                    double.parse(main.getProducts[i].oldPrice),
+                                title: productBox.values.toList()[i].name,
+                                image: productBox.values.toList()[i].image,
+                                price: double.parse(
+                                    productBox.values.toList()[i].price),
+                                oldPrice: double.parse(
+                                    productBox.values.toList()[i].oldPrice),
                                 banner: true,
                                 showButton: false,
                                 isExpanded: false,

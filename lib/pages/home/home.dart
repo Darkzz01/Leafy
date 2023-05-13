@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:leafy/data/dictionary.dart';
 import 'package:leafy/data/provider/provider.dart';
+import 'package:leafy/main.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:leafy/widgets/footer/footer.dart';
 import 'package:provider/provider.dart';
@@ -244,7 +245,7 @@ class _HomeState extends State<Home> {
           ),
           // Products - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
           const SizedBox(height: 110),
-          main.getProducts.isEmpty
+          productBox.values.toList().isEmpty
               ? const Column(
                   children: [
                     Icon(
@@ -268,13 +269,17 @@ class _HomeState extends State<Home> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      for (int i = 0; i < main.getProducts.length && i < 4; i++)
+                      for (int i = 0;
+                          i < productBox.values.length && i < 4;
+                          i++)
                         MenuBodyProduct(
                           banner: true,
-                          title: main.getProducts[i].name,
-                          image: main.getProducts[i].image,
-                          price: double.parse(main.getProducts[i].price),
-                          oldPrice: double.parse(main.getProducts[i].oldPrice),
+                          title: productBox.values.toList()[i].name,
+                          image: productBox.values.toList()[i].image,
+                          price:
+                              double.parse(productBox.values.toList()[i].price),
+                          oldPrice: double.parse(
+                              productBox.values.toList()[i].oldPrice),
                           showButton: true,
                           isExpanded: true,
                         ),
@@ -282,7 +287,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
           const SizedBox(height: 120),
-          main.getProducts.isEmpty
+          productBox.values.toList().isEmpty
               ? const Column(
                   children: [
                     Icon(
@@ -312,12 +317,12 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           for (int i = 0;
-                              i < main.getProducts.length && i < 7;
+                              i < productBox.values.toList().length && i < 7;
                               i++)
                             listViewItem(
-                              main.getProducts[i].image,
-                              main.getProducts[i].name,
-                              main.getProducts[i].descripcion,
+                              productBox.values.toList()[i].image,
+                              productBox.values.toList()[i].name,
+                              productBox.values.toList()[i].description,
                             ),
                         ],
                       ),
@@ -362,7 +367,7 @@ class _HomeState extends State<Home> {
             ],
           ),
           const SizedBox(height: 50),
-          main.getProducts.isEmpty
+          productBox.values.toList().isEmpty
               ? const Column(
                   children: [
                     Text(''),
@@ -375,13 +380,17 @@ class _HomeState extends State<Home> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      for (int i = 0; i < main.getProducts.length && i < 4; i++)
+                      for (int i = 0;
+                          i < productBox.values.toList().length && i < 4;
+                          i++)
                         MenuBodyProduct(
                           banner: false,
-                          image: main.getProducts[i].image,
-                          title: main.getProducts[i].name,
-                          price: double.parse(main.getProducts[i].price),
-                          oldPrice: double.parse(main.getProducts[i].oldPrice),
+                          image: productBox.values.toList()[i].image,
+                          title: productBox.values.toList()[i].name,
+                          price:
+                              double.parse(productBox.values.toList()[i].price),
+                          oldPrice: double.parse(
+                              productBox.values.toList()[i].oldPrice),
                           showButton: true,
                           isExpanded: true,
                         ),
