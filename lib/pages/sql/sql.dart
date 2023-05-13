@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leafy/data/db/sqflite.dart';
 import 'package:leafy/data/dictionary.dart';
-import 'package:leafy/data/models/sqflite/sqflite.dart';
 
 class SQL extends StatefulWidget {
   const SQL({super.key});
@@ -69,10 +67,7 @@ class _SQLState extends State<SQL> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          onPressed: () {
-                            SQLController.addName(Name(
-                                name: 'pedro', lastName: 'ramires', id: 1));
-                          },
+                          onPressed: () {},
                         ),
                       ],
                     ),
@@ -88,10 +83,7 @@ class _SQLState extends State<SQL> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          onPressed: () {
-                            SQLController.update(
-                                Name(name: 'maria', lastName: 'Perez', id: 2));
-                          },
+                          onPressed: () {},
                         ),
                       ],
                     ),
@@ -107,9 +99,7 @@ class _SQLState extends State<SQL> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          onPressed: () {
-                            SQLController.delete;
-                          },
+                          onPressed: () {},
                         ),
                       ],
                     ),
