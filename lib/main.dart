@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:leafy/data/models/product_model.dart';
 import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/pages/admin/admin.dart';
 import 'package:leafy/pages/admin/add_product.dart';
@@ -16,7 +17,7 @@ late Box mainBox;
 
 Future<void> main() async {
   await Hive.initFlutter();
-
+  Hive.registerAdapter(ProductModelAdapter());
   mainBox = await Hive.openBox('Main');
   runApp(const MyApp());
 }

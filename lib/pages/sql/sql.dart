@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
+import 'package:leafy/data/models/product_model.dart';
 import 'package:leafy/main.dart';
 
 class SQL extends StatefulWidget {
@@ -37,30 +38,20 @@ class _SQLState extends State<SQL> {
                     ),
                   ],
                 ),
-                child: Stack(
-                  children: [
-                    Center(
-                      child: Image.asset(
-                        'skull.png',
-                        color: Colors.black.withOpacity(0.1),
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "${mainBox.values.toList()[3].name}",
+                        style: const TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "${mainBox.keys.toList()[0]}: \t${mainBox.values.toList()[0]}",
-                            style: const TextStyle(
-                              fontSize: 30,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -84,7 +75,11 @@ class _SQLState extends State<SQL> {
                             ),
                           ),
                           onPressed: () {
-                            mainBox.put('Name', 'perez');
+                            mainBox.put('1', 'Juan');
+                            mainBox.put('2', 'Maria');
+                            mainBox.put('3', 'Pedro');
+                            mainBox.put('Prduct 1',
+                                ProductModel(name: 'Plant', lastName: 'l'));
                             setState(() {});
                           },
                         ),

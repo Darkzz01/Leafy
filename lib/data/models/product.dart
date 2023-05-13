@@ -5,6 +5,7 @@ class Product {
   String price;
   String oldPrice;
   String descripcion;
+
   Product({
     required this.image,
     required this.name,
