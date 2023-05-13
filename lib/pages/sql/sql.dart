@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
+import 'package:leafy/main.dart';
 
 class SQL extends StatefulWidget {
   const SQL({super.key});
@@ -44,6 +45,21 @@ class _SQLState extends State<SQL> {
                         color: Colors.black.withOpacity(0.1),
                       ),
                     ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "${mainBox.keys.toList()[0]}: \t${mainBox.values.toList()[0]}",
+                            style: const TextStyle(
+                              fontSize: 30,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -60,14 +76,17 @@ class _SQLState extends State<SQL> {
                       children: [
                         TextButton(
                           child: Text(
-                            'INSERT',
+                            'ADD',
                             style: TextStyle(
                               fontSize: 40,
                               color: greenColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            mainBox.put('Name', 'perez');
+                            setState(() {});
+                          },
                         ),
                       ],
                     ),
@@ -76,14 +95,16 @@ class _SQLState extends State<SQL> {
                       children: [
                         TextButton(
                           child: const Text(
-                            'UPDATE',
+                            'READ',
                             style: TextStyle(
                               fontSize: 40,
                               color: Colors.blueGrey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            print(mainBox.values);
+                          },
                         ),
                       ],
                     ),
@@ -99,7 +120,10 @@ class _SQLState extends State<SQL> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            mainBox.clear();
+                            setState(() {});
+                          },
                         ),
                       ],
                     ),

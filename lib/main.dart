@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:leafy/data/provider/provider.dart';
 import 'package:leafy/pages/admin/admin.dart';
 import 'package:leafy/pages/admin/add_product.dart';
@@ -10,7 +12,14 @@ import 'pages/home/home.dart';
 import 'pages/sing_in.dart';
 import 'pages/sing_up.dart';
 
-void main() => runApp(const MyApp());
+late Box mainBox;
+
+Future<void> main() async {
+  await Hive.initFlutter();
+
+  mainBox = await Hive.openBox('Main');
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
