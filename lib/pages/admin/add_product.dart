@@ -299,14 +299,6 @@ class _AddProductState extends State<AddProduct> {
                     shape: const BeveledRectangleBorder(),
                   ),
                   onPressed: () {
-                    // final product = Product(
-                    //   image: imageController.text,
-                    //   name: nameController.text,
-                    //   price: priceController.text,
-                    //   oldPrice: oldPriceController.text,
-                    //   descripcion: descriptionController.text,
-                    // );
-                    // main.setProducts = product;
                     productBox.add(
                       ProductModel(
                         image: imageController.text,
@@ -316,12 +308,6 @@ class _AddProductState extends State<AddProduct> {
                         description: descriptionController.text,
                       ),
                     );
-                    imageController.clear();
-                    nameController.clear();
-                    priceController.clear();
-                    oldPriceController.clear();
-                    descriptionController.clear();
-
                     setState(() {});
                   },
                   child: const Text(

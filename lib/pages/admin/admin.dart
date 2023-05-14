@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:leafy/data/dictionary.dart';
-import 'package:leafy/data/models/product.dart';
+import 'package:leafy/data/models/product_model.dart';
 import 'package:leafy/data/models/user.dart';
 import 'package:leafy/data/provider/provider.dart';
+import 'package:leafy/main.dart';
 import 'package:leafy/widgets/appBar/app_bar.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +20,7 @@ class _AdminState extends State<Admin> {
     final size = MediaQuery.of(context).size;
     final main = Provider.of<MainProvider>(context);
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: size.height,
         width: size.width,
         child: Column(
@@ -126,7 +127,8 @@ class _AdminState extends State<Admin> {
                             children: [
                               DataTable(
                                 columns: generateColumn0(),
-                                rows: generateproduct(main.getProducts, main),
+                                rows:
+                                    generateProduct(productBox.values.toList()),
                               ),
                             ],
                           ),
@@ -146,7 +148,7 @@ class _AdminState extends State<Admin> {
   List<DataRow> generateUser(List<User> users, MainProvider main) {
     List<DataRow> aux = [];
 
-    users.forEach((element) {
+    for (var element in users) {
       TextStyle cellStyle = const TextStyle(
         fontFamily: 'Ysabeau',
         fontSize: 17,
@@ -199,7 +201,7 @@ class _AdminState extends State<Admin> {
         ],
       );
       aux.add(row);
-    });
+    }
 
     return aux;
   }
@@ -295,10 +297,10 @@ class _AdminState extends State<Admin> {
     return aux;
   }
 
-  List<DataRow> generateproduct(List<Product> products, MainProvider main) {
+  List<DataRow> generateProduct(List<dynamic> products) {
     List<DataRow> aux = [];
 
-    products.forEach((element) {
+    for (ProductModel element in products) {
       TextStyle cellStyle = const TextStyle(
         fontFamily: 'Ysabeau',
         fontSize: 17,
@@ -324,13 +326,14 @@ class _AdminState extends State<Admin> {
           style: cellStyle,
         )),
         DataCell(Text(
-          element.descripcion,
+          element.description,
           style: cellStyle,
         )),
         DataCell(
           TextButton(
             onPressed: () {
-              main.deleteProduct(element);
+              productBox.delete(element.key);
+              setState(() {});
             },
             child: const Text(
               'Delete',
@@ -345,7 +348,7 @@ class _AdminState extends State<Admin> {
         ),
       ]);
       aux.add(row);
-    });
+    }
 
     return aux;
   }
